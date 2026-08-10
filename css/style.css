@@ -1,0 +1,525 @@
+/* ========================================
+   Bugatti Divo — Deep Archive Style
+   ======================================== */
+
+/* --- Variables --- */
+:root {
+  --bg: #0a0a0c;
+  --bg-card: #111114;
+  --bg-elevated: #18181c;
+  --text-primary: #f0f0f2;
+  --text-secondary: #8a8a8e;
+  --text-muted: #555558;
+  --accent: #004bfa;
+  --accent-dim: rgba(0,75,250,0.15);
+  --serif: 'Playfair Display', 'Georgia', serif;
+  --sans: 'Inter', 'Helvetica Neue', sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* --- Typography --- */
+.t-display {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+.t-section {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.t-body { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+.t-caption { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+.t-mono { font-family: var(--mono); }
+
+/* --- Section base --- */
+.section {
+  padding: clamp(5rem, 12vh, 9rem) clamp(1.5rem, 5vw, 6rem);
+}
+.section-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(2rem, 5vw, 5rem);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-name {
+  font-size: clamp(5rem, 18vw, 14rem);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+.hero-sub {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  max-width: 500px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: var(--text-muted);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ========================================
+   DATA GRID
+   ======================================== */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #222;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.data-cell {
+  background: var(--bg);
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 2vw, 2rem);
+  text-align: center;
+}
+.data-value {
+  font-family: var(--mono);
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+.data-value .unit {
+  font-size: 0.4em;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 0.15em;
+}
+.data-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 0.8rem;
+}
+
+/* ========================================
+   FULL-WIDTH IMAGE
+   ======================================== */
+.full-image {
+  width: 100%;
+  overflow: hidden;
+}
+.full-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.full-image figcaption {
+  padding: 1rem clamp(1.5rem, 5vw, 6rem);
+}
+
+/* ========================================
+   TWO-COLUMN TEXT
+   ======================================== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* ========================================
+   QUOTE / PULLQUOTE
+   ======================================== */
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+  padding: clamp(4rem, 10vh, 8rem) clamp(1.5rem, 5vw, 4rem);
+}
+.quote-mark {
+  font-family: var(--serif);
+  font-size: clamp(4rem, 8vw, 8rem);
+  color: var(--accent);
+  line-height: 1;
+  opacity: 0.6;
+}
+.quote-text {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 1rem 0 2rem;
+  color: var(--text-primary);
+}
+.quote-author {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Inline quote inside a chapter */
+.quote-inline {
+  border-left: 2px solid var(--accent);
+  padding: 0.2rem 0 0.2rem 1.5rem;
+}
+.quote-inline .qi-en {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+.quote-inline .qi-cn {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.6rem;
+}
+.quote-inline cite {
+  display: block;
+  margin-top: 0.9rem;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   IMAGE CARDS GROUP
+   ======================================== */
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+}
+.card-group.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 768px) {
+  .card-group, .card-group.cols-3 { grid-template-columns: 1fr; }
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.card:hover img { transform: scale(1.03); }
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+}
+.card-overlay .card-num {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.card-overlay .card-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+/* ========================================
+   SECTION NUMBER WATERMARK
+   ======================================== */
+.section-num {
+  font-family: var(--serif);
+  font-size: clamp(6rem, 12vw, 10rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  opacity: 0.04;
+  position: absolute;
+  top: clamp(2rem, 5vh, 4rem);
+  right: clamp(1.5rem, 5vw, 4rem);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ========================================
+   VIDEO SECTION
+   ======================================== */
+.video-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.video-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.7);
+}
+
+/* ========================================
+   SPEC TABLE / TABS
+   ======================================== */
+.spec-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+.spec-tab {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: var(--sans);
+}
+.spec-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+.spec-panel { display: none; }
+.spec-panel.active { display: block; }
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #1a1a1d;
+  font-size: 0.9rem;
+}
+.spec-row .spec-key { color: var(--text-muted); }
+.spec-row .spec-val { color: var(--text-primary); font-family: var(--mono); font-size: 0.85rem; }
+
+/* ========================================
+   PERFORMANCE BARS
+   ======================================== */
+.perf-bars { max-width: 600px; }
+.perf-bar-row {
+  margin-bottom: 1.5rem;
+}
+.perf-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+.perf-bar-label span:first-child { color: var(--text-secondary); }
+.perf-bar-label span:last-child { color: var(--text-primary); font-family: var(--mono); }
+.perf-bar-track {
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.perf-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ========================================
+   CHAPTER HEADING
+   ======================================== */
+.chapter-head {
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.chapter-head::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+}
+.chapter-tag {
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+/* ========================================
+   MORE LEGENDS / FOOTER
+   ======================================== */
+.legends-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #222;
+}
+.legend-card {
+  background: var(--bg);
+  padding: clamp(2rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.legend-card:hover { background: var(--bg-card); }
+.legend-card .legend-name {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.legend-card .legend-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.legend-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.legend-card:hover::before { transform: scaleX(1); }
+@media (max-width: 768px) {
+  .legends-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 3rem clamp(1.5rem, 5vw, 6rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #1a1a1d;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.footer-lang {
+  display: flex;
+  gap: 1rem;
+}
+.footer-lang a {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+.footer-lang a:hover { color: var(--text-primary); }
+.footer-lang a.active { color: var(--accent); }
+
+/* ========================================
+   SCROLL ANIMATIONS
+   ======================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 600px) {
+  .data-grid { grid-template-columns: repeat(2, 1fr); }
+  .data-grid .data-cell:last-child {
+    grid-column: span 2;
+  }
+  .hero-name { font-size: clamp(3.5rem, 16vw, 8rem); }
+}

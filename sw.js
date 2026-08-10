@@ -1,4 +1,4 @@
-const CACHE_NAME = 'divo-v2';
+const CACHE_NAME = 'divo-v3';
 const SHELL = [
   'index.html',
   'en.html',
@@ -23,9 +23,25 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  const url = new URL(e.request.url);
+  if (url.origin !== self.location.origin) return;
+
+  // Pages: network-first so updates always reach the user, cache as offline fallback.
+  if (e.request.mode === 'navigate') {
+    e.respondWith(
+      fetch(e.request).then(res => {
+        const clone = res.clone();
+        caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
+        return res;
+      }).catch(() => caches.match(e.request))
+    );
+    return;
+  }
+
+  // Static assets: cache-first, fill cache on miss.
   e.respondWith(
     caches.match(e.request).then(r => r || fetch(e.request).then(res => {
-      if (res.ok && e.request.url.startsWith(self.location.origin)) {
+      if (res.ok) {
         const clone = res.clone();
         caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
       }

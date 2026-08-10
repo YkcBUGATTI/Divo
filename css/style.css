@@ -8,8 +8,8 @@
   --bg-card: #111114;
   --bg-elevated: #18181c;
   --text-primary: #f0f0f2;
-  --text-secondary: #8a8a8e;
-  --text-muted: #555558;
+  --text-secondary: #a9a9b3;
+  --text-muted: #7d7d88;
   --accent: #004bfa;
   --accent-dim: rgba(0,75,250,0.15);
   --serif: 'Playfair Display', 'Georgia', serif;
@@ -76,11 +76,23 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   z-index: 0;
 }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
 .hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.35);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,10,12,.55) 0%, rgba(10,10,12,.08) 40%, rgba(10,10,12,.94) 100%),
+    linear-gradient(to right, rgba(10,10,12,.5), transparent 60%);
 }
 .hero-content {
   position: relative;
@@ -328,7 +340,6 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(0.7);
 }
 
 /* ========================================

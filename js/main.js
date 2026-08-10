@@ -8,10 +8,10 @@
   /* --- Language Detection --- */
   function detectLang() {
     var stored = localStorage.getItem('divo-lang');
-    if (stored) return stored;
+    if (stored) return Promise.resolve(stored);
     // file:// preview — no redirect
-    if (location.protocol === 'file:') return 'zh';
-    // Dual API fallback
+    if (location.protocol === 'file:') return Promise.resolve('zh');
+    // Dual API fallback; if both fail, stay on the current page (null)
     return fetch('https://ipapi.co/json/')
       .then(function (r) { return r.json(); })
       .then(function (d) { return d.country_code === 'CN' ? 'zh' : 'en'; })
@@ -19,11 +19,12 @@
         return fetch('https://ipwho.is/')
           .then(function (r) { return r.json(); })
           .then(function (d) { return d.country === 'CN' ? 'zh' : 'en'; })
-          .catch(function () { return 'zh'; });
+          .catch(function () { return null; });
       });
   }
 
   function applyLang(lang) {
+    if (!lang) return;
     var isEn = location.pathname.endsWith('en.html');
     var currentIsEn = isEn;
     var shouldRedirect = lang === 'en' && !currentIsEn;

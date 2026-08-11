@@ -231,6 +231,47 @@
     });
   }
 
+  /* 规格圆环表 */
+  var G_LEN = 527.8;
+  var runGauge = function (g) {
+    if (g.__done) return;
+    g.__done = true;
+    var target = parseFloat(g.getAttribute('data-gauge')) || 0;
+    var max = parseFloat(g.getAttribute('data-max')) || target;
+    var bar = g.querySelector('.gauge__bar');
+    var num = g.querySelector('figcaption b');
+    var dur = 2200;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var t = Math.min((ts - start) / dur, 1);
+      var e = (t === 1) ? 1 : (1 - Math.pow(2, -10 * t));
+      if (bar) bar.style.strokeDashoffset = String(G_LEN * (1 - (target / max) * e));
+      if (num) num.textContent = Math.round(target * e).toLocaleString('en-US');
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  };
+  var gaugeInView = function () {
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    document.querySelectorAll('.gauge').forEach(function (g) {
+      if (g.__done) return;
+      var r = g.getBoundingClientRect();
+      if (r.top < vh * 0.9 && r.bottom > 0) runGauge(g);
+    });
+  };
+  var gaugeIO = ('IntersectionObserver' in window) ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) runGauge(en.target);
+    });
+  }, { threshold: 0.35 }) : null;
+  document.querySelectorAll('.gauge').forEach(function (g) {
+    if (gaugeIO) gaugeIO.observe(g);
+  });
+  window.addEventListener('scroll', gaugeInView, { passive: true });
+  window.addEventListener('resize', gaugeInView, { passive: true });
+  gaugeInView();
+
   /* PWA */
   if (window.location.protocol === 'https:' && 'serviceWorker' in navigator) {
     window.addEventListener('load', function () {

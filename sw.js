@@ -1,4 +1,4 @@
-const CACHE_NAME = 'divo-v6';
+const CACHE_NAME = 'divo-v7';
 const SHELL = [
   'index.html',
   'en.html',

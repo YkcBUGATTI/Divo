@@ -1,4 +1,4 @@
-const CACHE_NAME = 'divo-v7';
+﻿const CACHE_NAME = 'divo-v8';
 const SHELL = [
   'index.html',
   'en.html',
@@ -50,3 +50,4 @@ self.addEventListener('fetch', e => {
     }))
   );
 });
+

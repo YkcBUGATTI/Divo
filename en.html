@@ -1,452 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bugatti Divo — The Archive</title>
-  <meta name="description" content="Bugatti Divo: 1,500 PS, 40 units, a coachbuilt weapon engineered for corners.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0a0a0c">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIVO — Bugatti Divo</title>
+<meta name="description" content="Bugatti Divo: a coachbuilt hypercar engineered for corners. 1,500 PS W16, 456 kg of downforce, limited to 40 units — from Albert Divo's racing heritage to the Targa Florio return.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DIVO — Bugatti Divo">
+<meta property="og:description" content="Built for corners. 1,500 PS / 456 kg downforce / 40 units.">
+<meta property="og:image" content="img/hero-launch.webp">
+<meta property="og:url" content="https://divo.hypercar.site/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0b0d'/%3E%3Ctext x='50' y='68' font-size='62' text-anchor='middle' fill='%23f4f2ee' font-family='serif'%3ED%3C/text%3E%3C/svg%3E">
+<script src="js/lang-detect.js"></script>
 </head>
 <body>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-bg">
-    <img src="img/hero-launch.webp" alt="Bugatti Divo in action" width="2000" height="1125" loading="eager">
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <span class="nav__now mono" id="navNow">01 · The Name</span>
+    <a class="nav__brand is-hidden" href="#hero">
+      <svg viewBox="0 0 2468.89 566.93" width="86" height="20" fill="currentColor" aria-label="BUGATTI"><path d="M272.56 273.34c28.81-26.48 45.95-63.86 45.95-107.47 0-89.56-65.41-154.97-155.75-154.97H0v545.13h174.44c92.67 0 160.42-66.97 160.42-159.64 0-52.18-23.36-95.79-62.3-123.04ZM87.22 95.01h72.42c42.83 0 71.65 28.81 71.65 70.87s-28.81 70.87-71.65 70.87H87.22V95.01Zm84.1 376.91h-84.1V320.84h84.1c45.17 0 76.32 30.37 76.32 75.54s-31.15 75.54-76.32 75.54ZM648.69 406.51c0 44.39-31.93 76.32-76.32 76.32s-76.32-31.93-76.32-76.32V10.9h-87.22v389.38c0 96.56 68.53 166.65 163.54 166.65s163.54-70.09 163.54-166.65V10.9h-87.22v395.61ZM993.03 0c-95.01 0-163.54 70.09-163.54 166.65v233.62c0 96.56 68.53 166.65 163.54 166.65s163.54-70.09 163.54-166.65V241.41H993.03v84.11h76.32v80.99c0 44.39-31.93 76.32-76.32 76.32s-76.32-31.93-76.32-76.32V160.42c0-44.39 31.93-76.32 76.32-76.32s76.32 31.93 76.32 76.32v14.02h87.22v-7.79C1156.57 70.09 1088.04 0 993.03 0ZM1344.1 10.9l-125.38 545.12h86.44L1330.08 447h147.96l24.92 109.02h86.44L1464.03 10.9H1344.1Zm5.45 351.99 54.51-239.08 54.51 239.08h-109.02ZM1604.2 95.01h119.93l.78 461.02h85.66l.78-461.02h119.92V10.9H1604.2v84.11zM1976.59 95.01h119.93l.78 461.02h85.66l.78-461.02h119.92V10.9h-327.07v84.11zM2381.67 10.9h87.22v545.12h-87.22z"></path></svg>
+      <span class="nav__brand-sub">DIVO</span>
+    </a>
+    <span class="nav__lang">
+      <a class="lang-btn mono" href="index.html">中文</a>
+      <button class="nav__menu-btn mono" id="menuBtn" aria-label="Chapter menu" aria-expanded="false"><span class="nav__menu-icon"><i></i><i></i><i></i></span></button>
+    </span>
   </div>
-  <div class="hero-content">
-    <h1 class="t-display hero-name">DIVO</h1>
-    <p class="hero-sub">A 1,500-hp coachbuilt weapon for corners</p>
-  </div>
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
+  <div class="nav__progress" aria-hidden="true"><i id="navBar"></i></div>
+</header>
 
-<!-- ===== 01 DATA ANCHOR ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">01</span>
-  <div class="data-grid reveal">
-    <div class="data-cell">
-      <div class="data-value"><span data-count="1500" data-suffix="">0</span><span class="unit">PS</span></div>
-      <div class="data-label">Maximum Power</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="380" data-suffix="">0</span><span class="unit">km/h</span></div>
-      <div class="data-label">Top Speed (limited)</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="2.4" data-decimals="1" data-suffix="">0</span><span class="unit">s</span></div>
-      <div class="data-label">0–100 km/h</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="456" data-suffix="">0</span><span class="unit">kg</span></div>
-      <div class="data-label">Total Downforce</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="1600" data-suffix="">0</span><span class="unit">Nm</span></div>
-      <div class="data-label">Peak Torque</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="40" data-suffix="">0</span><span class="unit">units</span></div>
-      <div class="data-label">Limited Production</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 02 BIRTH ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">02</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">The Beginning</span>
-    <h2 class="t-section">Birth</h2>
-  </div>
-  <div class="two-col reveal">
-    <div>
-      <p class="t-body">In August 2018, at The Quail in Monterey, Bugatti unveiled the Divo.</p>
-      <p class="t-body" style="margin-top:1rem;">New CEO Stephan Winkelmann had just taken the helm and made a call: straight-line speed alone wasn't enough. Chiron was already the fastest production car on Earth. Customers wanted something else — the thrill of a corner.</p>
-      <p class="t-body" style="margin-top:1rem;">So the Divo was born. Same W16 heart, but the chassis, aerodynamics, and weight were all reworked. Top speed dropped from 420+ to 380 km/h — those 40 km/h bought 90 kg of extra downforce and 8 seconds off the Nardò handling circuit.</p>
-    </div>
-    <div>
-      <p class="t-body">The car is named after Albert Divo, a French racing driver who won the Targa Florio twice for Bugatti in the 1920s and '30s — a 148 km endurance race through the mountain roads of Sicily, with no guardrails, only stone walls and cliffs.</p>
-      <p class="t-body" style="margin-top:1rem;">The Divo also marks Bugatti's return to coachbuilding. 40 units, no two alike. Each one a bespoke collaboration between customer and designer, starting from a blank page.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FULL-SCREEN QUOTE ===== -->
-<div class="quote-section reveal">
-  <div class="quote-mark">"</div>
-  <p class="quote-text">To date, a modern Bugatti has represented a perfect balance between high performance, straight-line dynamics and luxury. With the Divo, we are now shifting the focus to lateral dynamics.</p>
-  <p class="quote-author">Stephan Winkelmann · President, Bugatti</p>
+<div class="menu-overlay" id="menuOverlay" hidden>
+  <nav class="menu-overlay__nav" aria-label="Chapter menu"></nav>
 </div>
 
-<!-- ===== 03 DESIGN ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">03</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Design</span>
-    <h2 class="t-section">Design</h2>
+<div class="scroll-gauge" aria-hidden="true">
+  <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19"/><circle class="sg__bar" cx="22" cy="22" r="19"/></svg>
+  <span class="sg__num mono">00</span>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <video autoplay muted loop playsinline preload="metadata" poster="img/hero-launch.webp">
+      <source src="video/thermal-hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__veil"></div>
   </div>
-
-  <figure class="full-image reveal">
-    <img src="img/side-profile2.webp" alt="Bugatti Divo side profile" width="2000" height="1333" loading="lazy">
-    <figcaption class="t-caption">01 &nbsp; A lower, longer silhouette — muscular elegance above, technical precision below.</figcaption>
-  </figure>
-
-  <div class="two-col reveal" style="margin-top:3rem;">
-    <div>
-      <p class="t-body">Design lead Jascha Straub gave his team a simple brief: the Divo must be instantly recognizable as a Bugatti, but impossible to confuse with a Chiron.</p>
-      <p class="t-body" style="margin-top:1rem;">The front end is entirely new. The horseshoe grille is wider, flanked by new air inlets for brake cooling. The vertical LED headlights are just 35 mm tall — the slimmest ever on a Bugatti production car.</p>
-    </div>
-    <div>
-      <p class="t-body">The roof is shaped as a NACA duct, channeling air along a central fin that runs from front to rear wing. That fin is a direct nod to the Type 57 Atlantic — arguably the most beautiful car Bugatti ever made.</p>
-      <p class="t-body" style="margin-top:1rem;">At the rear, the 3D-printed taillight steals the show: 44 fins of varying size, wider at the outer edge, narrower toward the center, creating a gradual fade when illuminated. The entire rear grille is produced by a 3D printing process.</p>
-    </div>
-  </div>
-
-  <div class="card-group reveal" style="margin-top:3rem;">
-    <div class="card">
-      <img src="img/sketch-rear.webp" alt="Divo design sketch rear" width="1600" height="900" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">02</div>
-        <div class="card-desc">Design sketch — rear 3/4 view / Jascha Straub, Bugatti Design</div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/sketch-side.webp" alt="Divo design sketch side" width="1600" height="1142" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">03</div>
-        <div class="card-desc">Design sketch — side view / Jascha Straub, Bugatti Design</div>
-      </div>
+  <div class="hero__content">
+    <p class="hero__tag">MADE FOR CORNERS <b>✕</b> COACHBUILDING · 40 UNITS</p>
+    <h1 class="hero__title">DIVO</h1>
+    <p class="hero__sub">Built for corners. The beginning of modern coachbuilding. 40 units.</p>
+    <div class="hero__data">
+      <div><b><em data-count="1500">0</em></b><span>PS</span></div>
+      <div><b><em data-count="1600">0</em></b><span>NM</span></div>
+      <div><b><em data-count="456">0</em></b><span>KG DOWNFORCE</span></div>
+      <div><b>40</b><span>UNITS</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===== 04 AERODYNAMICS ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">04</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Aerodynamics</span>
-    <h2 class="t-section">Aerodynamics</h2>
-  </div>
-
-  <div class="two-col reveal">
+<!-- ============ 01 THE NAME ============ -->
+<div class="chapter-break reveal" id="ch01" data-watermark="01">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">01</span>
     <div>
-      <p class="t-body">The Divo's aero package isn't a few carbon fiber canards bolted on. The entire front cover, front spoiler, side skirts, rear wing, and diffuser were redesigned from scratch. One goal: downforce.</p>
-      <p class="t-body" style="margin-top:1rem;">The result: 456 kg of total downforce, 90 kg more than the Chiron. That translates directly into grip through corners.</p>
-
-      <div class="perf-bars" style="margin-top:2.5rem;">
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>Downforce gain</span><span>+90 kg vs Chiron</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="100"></div></div>
-        </div>
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>Nardò lap improvement</span><span>−8 s vs Chiron</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="85"></div></div>
-        </div>
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>Lateral acceleration</span><span>1.6 g</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="92"></div></div>
-        </div>
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>Weight reduction</span><span>−35 kg vs Chiron</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="60"></div></div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <img src="img/rear-wing.webp" alt="Divo rear wing and diffuser" width="1600" height="1253" loading="lazy" style="width:100%;">
-      <p class="t-caption" style="margin-top:0.8rem;">04 &nbsp; The 1.83 m rear wing doubles as an air brake. Combined with the new diffuser, 90 kg more downforce than Chiron.</p>
-    </div>
+      <h2>The Name<span class="latin">名字的由来</span></h2>
+      <p>Albert Divo — the French racing driver who won the Targa Florio twice for Bugatti.</p></div>
   </div>
+</div>
 
-  <div class="card-group cols-3 reveal" style="margin-top:3rem;">
-    <div class="card">
-      <img src="img/naca-roof.webp" alt="NACA air duct roof" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">05</div>
-        <div class="card-desc">NACA duct roof for engine cooling</div>
-      </div>
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">This car carries a driver's name. In 1928 and 1929, Albert Divo won the Targa Florio back-to-back in a Type 35 B — 148 km of unguarded mountain roads through Sicily, no guardrails, only stone walls and cliffs.</p>
+      <p>At The Quail, August 2018, Bugatti unveiled the Divo: 35 kg lighter and 90 kg more downforce than the Chiron, top speed voluntarily limited to 380 km/h — every kilogram of drag traded for cornering grip.</p>
     </div>
-    <div class="card">
-      <img src="img/central-fin.webp" alt="Central fin from Type 57 Atlantic" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">06</div>
-        <div class="card-desc">Central fin derived from the Type 57 Atlantic</div>
+
+    <div class="hcards reveal">
+      <div class="hcard">
+        <span class="hcard__year">1928 · Targa Florio</span>
+        <h3>First Win</h3>
+        <span class="hcard__num">Type 35 B · Sicilian roads</span>
+        <p>In his first year with the Bugatti works team, Albert Divo won the toughest endurance circuit of its era.</p>
       </div>
-    </div>
-    <div class="card">
-      <img src="img/horseshoe-grille.webp" alt="Horseshoe grille" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">07</div>
-        <div class="card-desc">Wider horseshoe grille for optimized air flow</div>
+      <div class="hcard">
+        <span class="hcard__year">1929 · Repeat</span>
+        <h3>Two in a Row</h3>
+        <span class="hcard__num">Six Grand Prix wins</span>
+        <p>Over a 20-year career, Divo scored six Grand Prix victories and two Targa Florio wins for Bugatti.</p>
+      </div>
+      <div class="hcard">
+        <span class="hcard__year">Spring 2018</span>
+        <h3>Sold Out Before Unveiling</h3>
+        <span class="hcard__num">40 units · €5 million</span>
+        <p>The Divo was shown to select Chiron customers in discreet one-to-one meetings — all 40 units were sold within weeks of the first appointment.</p>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ===== 05 INTERIOR ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">05</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Interior</span>
-    <h2 class="t-section">Interior</h2>
-  </div>
-
-  <div class="two-col reveal">
-    <div>
-      <img src="img/interior-rb.webp" alt="Divo interior Divo Racing Blue" width="1600" height="1067" loading="lazy" style="width:100%;">
-      <p class="t-caption" style="margin-top:0.8rem;">08 &nbsp; Divo Racing Blue dominates the driver's side; the passenger side stays dark with selective accents.</p>
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/side-profile2.webp" alt="Bugatti Divo side profile" loading="lazy" width="2000" height="1333">
     </div>
-    <div>
-      <p class="t-body">The cabin carries the exterior's two-tone logic inside. The driver's side is almost entirely Divo Racing Blue — a bright turquoise shade developed exclusively for this car. The passenger side stays dark, split cleanly down the center console.</p>
-      <p class="t-body" style="margin-top:1rem;">The seats are a new design with stronger lateral support, thinner and lighter backs, but no compromise on comfort. Carbon fiber door panels feature the same diamond pattern as the exterior.</p>
-      <p class="t-body" style="margin-top:1rem;">Alcantara, carbon trim, Divo Grey leather — every interior material mirrors the exterior spec. Each car's colorway is signed off individually between customer and design team.</p>
-    </div>
-  </div>
-
-  <figure class="full-image reveal" style="margin-top:3rem;">
-    <img src="img/interior-rb2.webp" alt="Divo interior detail" width="2000" height="1333" loading="lazy">
-    <figcaption class="t-caption">09 &nbsp; New seats with enhanced lateral support; carbon door panels feature a diamond pattern.</figcaption>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">01</span>
+      <span class="en">A lower, longer silhouette — muscular elegance above, technical precision below.</span>
+    </figcaption>
   </figure>
 </section>
 
-<!-- ===== 06 BESPOKE ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">06</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Bespoke</span>
-    <h2 class="t-section">Bespoke</h2>
+<!-- ============ 02 DESIGN ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch02" data-watermark="02">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">02</span>
+    <div>
+      <h2>Design<span class="latin">设计</span></h2>
+      <p>Instantly recognizable as a Bugatti, impossible to confuse with a Chiron.</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">Design lead Jascha Straub gave his team a one-line brief: the Divo must be instantly recognizable as a Bugatti, yet impossible to confuse with a Chiron.</p>
+      <p>The roof is shaped as a NACA duct, channeling air along a central fin to the rear wing — a direct nod to the Type 57 Atlantic. The front end was completely remade; the 3D-printed rear light comes from a new manufacturing process.</p>
+    </div>
+
+    <div class="points reveal">
+      <div class="point">
+        <span class="point__no">Signature · 01</span>
+        <h3>NACA Roof</h3>
+        <p>An air inlet at the center of the roof, <b>feeding the W16 and smoothing airflow over the wing</b>.</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Signature · 02</span>
+        <h3>35 mm Headlights</h3>
+        <p>The slimmest LED units ever fitted to a production Bugatti, <b>with boomerang daytime running lights</b>.</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Signature · 03</span>
+        <h3>3D-Printed Taillight</h3>
+        <p>44 fins of varying size, <b>fading from edge to center when lit</b>.</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Signature · 04</span>
+        <h3>Wider Grille</h3>
+        <p>The horseshoe reinterpreted, <b>with new inlets for brake cooling</b>.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="two-col reveal">
-    <div>
-      <p class="t-body">40 Divos. No two the same.</p>
-      <p class="t-body" style="margin-top:1rem;">Bugatti pulled the word "coachbuilding" out of the museum. Historically, a coachbuilder would craft bodywork over a customer's chosen chassis. With the Divo, the collaboration goes from paint color to stitch direction — every detail, co-developed.</p>
-      <p class="t-body" style="margin-top:1rem;">The "Lady Bug" is the most extreme example. The customer wanted a geometric gradient diamond pattern across the entire body. The design team spent a year and a half finding a technical solution: six-meter transfer films applied piece by piece, each one bubble-free, then painted over without damaging the pattern.</p>
-      <blockquote class="quote-inline reveal" style="margin-top:2.5rem;">
-        <p class="qi-en">“If it bears comparison with another car, it is not a Bugatti.”</p>
-        <cite>Ettore Bugatti · Founder</cite>
-      </blockquote>
-    </div>
-    <div>
-      <p class="t-body">Deliveries took place at The Thermal Club in California. Three Divos gathered one last time before going to their owners — French Racing Blue, Titanium Silver Matt, Argent Crystal Gloss — three completely different personalities, one chassis.</p>
-      <p class="t-body" style="margin-top:1rem;">The final Divo delivered in Europe wore the classic Bugatti EB color as its primary. The owner has a sharp instinct for tradition.</p>
+  <!-- Sketch slider -->
+  <div class="chapter__inner">
+    <span class="sec-label reveal">Design Archive</span>
+    <div class="slider reveal" id="sketchSlider">
+      <div class="slider__stage">
+        <img src="img/sketch-rear.webp" alt="Rear design sketch" loading="lazy" width="1600" height="900" data-cap="Jascha Straub — rear 3/4 design sketch">
+        <img src="img/sketch-side.webp" alt="Side design sketch" loading="lazy" width="1600" height="1142" data-cap="Jascha Straub — side design sketch">
+      </div>
+      <div class="slider__cap">
+        <span class="info"><span id="sketchCapLabel">Sketch · 01</span><span id="sketchCapText">Jascha Straub — rear 3/4 design sketch</span></span>
+        <div class="slider__nav">
+          <span class="slider__count"><b id="sketchCur">01</b> / 02</span>
+          <button class="slider__btn" id="sketchPrev" aria-label="Previous">←</button>
+          <button class="slider__btn" id="sketchNext" aria-label="Next">→</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="card-group reveal" style="margin-top:3rem;">
-    <div class="card">
-      <img src="img/custom-french-blue.webp" alt="Divo French Racing Blue" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">10</div>
-        <div class="card-desc">French Racing Blue Matt / Beluga Black interior</div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/custom-titanium.webp" alt="Divo Titanium Silver" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">11</div>
-        <div class="card-desc">Divo Titanium Silver Matt / Divo Grey interior</div>
+  <!-- Exploded view: full width -->
+  <div class="chapter__inner">
+    <span class="sec-label reveal">Exploded View</span>
+    <div class="vframe reveal">
+      <video autoplay muted loop playsinline preload="metadata" poster="img/explosion-poster.webp">
+        <source src="video/explosion.mp4" type="video/mp4">
+      </video>
+      <div class="vframe__cap">
+        <span class="no">DESIGN · 04</span>
+        <span class="t">From carbon body to W16 heart — every layer serves the corners.</span>
       </div>
     </div>
   </div>
-  <div class="card-group reveal" style="margin-top:clamp(1rem,2vw,2rem);">
-    <div class="card">
-      <img src="img/custom-argent.webp" alt="Divo Argent Crystal" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">12</div>
-        <div class="card-desc">Argent Crystal Gloss / Gris Rafale & Lake Blue interior</div>
+
+  <div class="chapter__inner">
+    <div class="dcards reveal">
+      <div class="dcard">
+        <img src="img/naca-roof.webp" alt="NACA roof duct" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 01</span>
+          <h3>NACA Roof Duct</h3>
+          <p>At the center of the roof, <b>feeding the W16</b> and reducing turbulence over the rear wing.</p>
+        </div>
+      </div>
+      <div class="dcard">
+        <img src="img/central-fin.webp" alt="Central fin from the Type 57 Atlantic" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 02</span>
+          <h3>Central Fin</h3>
+          <p>Running from nose to rear wing, <b>a nod to the Type 57 Atlantic</b>.</p>
+        </div>
+      </div>
+      <div class="dcard">
+        <img src="img/front-light.webp" alt="35 mm headlights" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 03</span>
+          <h3>35 mm Headlights</h3>
+          <p>The slimmest LED units ever fitted to a production Bugatti, <b>with boomerang daytime running lights</b>.</p>
+        </div>
+      </div>
+      <div class="dcard">
+        <img src="img/horseshoe-grille.webp" alt="Widened horseshoe grille" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 04</span>
+          <h3>Widened Grille</h3>
+          <p>One of Bugatti's three key design elements, <b>widened and repositioned for the Divo</b>.</p>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <img src="img/thermal-club-3.webp" alt="Three Divos at Thermal Club" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">13</div>
-        <div class="card-desc">Three US customer Divos meet at The Thermal Club before delivery</div>
-      </div>
+
+    <div class="quote reveal">
+      <blockquote>We had a host of liberties when we developed the Divo because we limited the top speed to 380 km/h. As a result, we were able to generate more downforce and turn the Divo into a visually and technically independent model.</blockquote>
+      <figcaption><b>Frank Heyl</b> — Deputy Design Director, Bugatti</figcaption>
+    </div>
+
+    <div class="figrow reveal">
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/3d-taillight.webp" alt="3D-printed taillight" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">02</span>
+          <span class="en">The 3-D rear light, part of the rear grille produced by a 3D printing process.</span>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/taillight-detail.webp" alt="3D taillight detail" loading="lazy" width="1600" height="1200">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">03</span>
+          <span class="en">Fins widen outward for intensity, narrow inward for a fading effect.</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ===== 07 SPECIFICATIONS ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">07</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Specifications</span>
-    <h2 class="t-section">Specifications</h2>
-  </div>
-
-  <div class="reveal" style="max-width:700px;">
-    <div class="spec-tabs">
-      <button class="spec-tab active" data-panel="spec-powertrain">Powertrain</button>
-      <button class="spec-tab" data-panel="spec-chassis">Chassis</button>
-      <button class="spec-tab" data-panel="spec-dimensions">Dimensions</button>
-    </div>
-
-    <div id="spec-powertrain" class="spec-panel active">
-      <div class="spec-row"><span class="spec-key">Engine</span><span class="spec-val">W16 · 7,993 cm³</span></div>
-      <div class="spec-row"><span class="spec-key">Forced induction</span><span class="spec-val">4 turbos · 2-stage · water/air intercooling</span></div>
-      <div class="spec-row"><span class="spec-key">Max power</span><span class="spec-val">1,103 kW / 1,500 PS @ 6,700 rpm</span></div>
-      <div class="spec-row"><span class="spec-key">Max torque</span><span class="spec-val">1,600 Nm (2,000–6,000 rpm)</span></div>
-      <div class="spec-row"><span class="spec-key">Gearbox</span><span class="spec-val">7-speed DSG dual-clutch</span></div>
-      <div class="spec-row"><span class="spec-key">Drivetrain</span><span class="spec-val">Permanent AWD · front-axle controlled diff</span></div>
-      <div class="spec-row"><span class="spec-key">0–100 km/h</span><span class="spec-val">2.4 seconds</span></div>
-      <div class="spec-row"><span class="spec-key">Top speed</span><span class="spec-val">380 km/h (limited)</span></div>
-    </div>
-
-    <div id="spec-chassis" class="spec-panel">
-      <div class="spec-row"><span class="spec-key">Suspension</span><span class="spec-val">Double wishbone, front &amp; rear</span></div>
-      <div class="spec-row"><span class="spec-key">Front wheels</span><span class="spec-val">10J × 20 ET55 · 285/30 R20</span></div>
-      <div class="spec-row"><span class="spec-key">Rear wheels</span><span class="spec-val">13.5J × 21 ET71.5 · 355/25 R21</span></div>
-      <div class="spec-row"><span class="spec-key">Front brakes</span><span class="spec-val">Ø 420 mm · 8-piston</span></div>
-      <div class="spec-row"><span class="spec-key">Rear brakes</span><span class="spec-val">Ø 400 mm · 6-piston</span></div>
-      <div class="spec-row"><span class="spec-key">Drive modes</span><span class="spec-val">Lift · EB · Autobahn · Handling</span></div>
-      <div class="spec-row"><span class="spec-key">Lateral G</span><span class="spec-val">1.6 g (Handling mode)</span></div>
-      <div class="spec-row"><span class="spec-key">Total downforce</span><span class="spec-val">456 kg</span></div>
-    </div>
-
-    <div id="spec-dimensions" class="spec-panel">
-      <div class="spec-row"><span class="spec-key">Length</span><span class="spec-val">4,641 mm</span></div>
-      <div class="spec-row"><span class="spec-key">Width</span><span class="spec-val">2,018 mm</span></div>
-      <div class="spec-row"><span class="spec-key">Height</span><span class="spec-val">1,212 mm</span></div>
-      <div class="spec-row"><span class="spec-key">Wheelbase</span><span class="spec-val">2,711 mm</span></div>
-      <div class="spec-row"><span class="spec-key">Track front / rear</span><span class="spec-val">1,749 mm / 1,666 mm</span></div>
-      <div class="spec-row"><span class="spec-key">Kerb weight</span><span class="spec-val">1,995 kg (35 kg lighter than Chiron)</span></div>
-      <div class="spec-row"><span class="spec-key">Fuel tank</span><span class="spec-val">100 L</span></div>
-      <div class="spec-row"><span class="spec-key">Production</span><span class="spec-val">40 units</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 08 LEGACY ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">08</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Targa Florio</span>
-    <h2 class="t-section">Targa Florio</h2>
-  </div>
-  <div class="two-col reveal">
+<!-- ============ 03 AERODYNAMICS ============ -->
+<div class="chapter-break reveal" id="ch03" data-watermark="03">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">03</span>
     <div>
-      <p class="t-body">Albert Divo joined the Bugatti works team in 1928 — and won the Targa Florio that same year, then again the next. The course followed roughly 148 km of public mountain roads through Sicily's Madonie range, with around 1,400 corners and no guardrails, only stone walls and cliffs.</p>
-      <p class="t-body" style="margin-top:1rem;">He drove a Type 35 B. Between 1925 and 1929, the Type 35 won the Targa Florio five times in a row for Bugatti — the fastest cornering car of its era.</p>
+      <h2>Aerodynamics<span class="latin">空气动力学</span></h2>
+      <p>456 kg of total downforce — 90 kg more than the Chiron.</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">The Divo's aero package isn't a few carbon canards. Front cover, front spoiler, side skirts, rear wing, diffuser — everything redesigned with one goal: downforce.</p>
+      <p>Every kilogram saved by weight reduction went back into downforce, up to the limit of the tyres. The final number: <b>456 kg, 90 kg more than the Chiron</b>.</p>
     </div>
-    <div>
-      <p class="t-body">In 2022, Bugatti drove the Divo back to that circuit, joined by a Type 35. Two cars, 90 years apart, reunited where Albert Divo made his name.</p>
-      <blockquote class="quote-inline" style="margin:1.6rem 0;">
-        <p class="qi-en">“I am deeply impressed by how the Divo — designed for much higher speeds — is able to get to grips with these roads, some of which are in very poor condition, and the very short distances between corners.”</p>
-        <cite>Andy Wallace · Test driver, Bugatti</cite>
-      </blockquote>
-      <p class="t-body">The Divo never chased a straight-line record. It pursues a different kind of fast — lateral fast. 40 units, each one different: not a mass-produced product, but a one-to-one conversation between person and machine.</p>
+
+    <!-- Rear wing hotspots -->
+    <span class="sec-label reveal">Technical Map</span>
+    <div class="explorer reveal" id="explorer">
+      <div class="explorer__img">
+        <img src="img/rear-wing.webp" alt="Divo rear wing and diffuser" loading="lazy" width="1600" height="1253">
+        <span class="explorer__hint">Hover to explore ✕</span>
+        <div class="hotspot" style="left:32%;top:24%;" data-h="0">
+          <div class="hotspot__label"><b>1.83 m Rear Wing</b><small>23% wider than the Chiron's<br>doubles as an air brake</small></div>
+        </div>
+        <div class="hotspot" style="left:63%;top:72%;" data-h="1">
+          <div class="hotspot__label"><b>New Diffuser</b><small>More efficient design<br>housing the four tailpipes</small></div>
+        </div>
+        <div class="hotspot" style="left:15%;top:34%;" data-h="2">
+          <div class="hotspot__label"><b>NACA Airflow</b><small>Roof air channeled to the wing<br>less turbulence · more downforce</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b>1.83<small style="font-size:.45em;color:var(--ink-faint)">m</small></b><span>Rear wing width</span></div>
+      <div class="stat"><b>23<small style="font-size:.45em;color:var(--ink-faint)">%</small></b><span>Wider than the Chiron</span></div>
+      <div class="stat"><b>90<small style="font-size:.45em;color:var(--ink-faint)">kg</small></b><span>Extra downforce</span></div>
+      <div class="stat"><b>380<small style="font-size:.45em;color:var(--ink-faint)">km/h</small></b><span>Traded speed for air</span></div>
+    </div>
+
+    <div class="inline-quote reveal">
+      <p>As the car dives under heavy braking, the front splitter drops closer to the ground and downforce builds — engineers deliberately capped front-axle downforce to keep the aero balance stable under braking.</p>
     </div>
   </div>
 
-  <figure class="full-image reveal" style="margin-top:3rem;">
-    <img src="img/targa-duo.webp" alt="Divo and Type 35 reunited on the Targa Florio circuit" width="2000" height="1333" loading="lazy">
-    <figcaption class="t-caption">14 &nbsp; Divo and Type 35 reunited on the Targa Florio circuit — from the official film “Following in Albert Divo's footsteps”.</figcaption>
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/wheels-brakes.webp" alt="Wheels and brake cooling" loading="lazy" width="2000" height="1174">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">04</span>
+      <span class="en">Four independent air sources per side cool the brakes; wing vanes painted in the French tricolour.</span>
+    </figcaption>
   </figure>
 </section>
 
-<!-- ===== VIDEO ===== -->
-<div class="video-section reveal">
-  <video preload="metadata" muted loop playsinline poster="img/targa-hero.webp" width="2000" height="1125" style="width:100%;height:auto;">
-    <source src="img/targa-florio.mp4" type="video/mp4">
-  </video>
+<!-- ============ 04 PERFORMANCE ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch04" data-watermark="04">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">04</span>
+    <div>
+      <h2>Performance<span class="latin">性能</span></h2>
+      <p>Eight seconds faster per lap at Nardò.</p></div>
+  </div>
 </div>
 
-<!-- ===== FULL-SCREEN QUOTE 2 ===== -->
-<div class="quote-section reveal">
-  <div class="quote-mark">"</div>
-  <p class="quote-text">The modern interpretation of coachbuilding gave us engineers new freedom.</p>
-  <p class="quote-author">Stefan Ellrott · Head of Technical Development, Bugatti</p>
+<section class="chapter">
+  <div class="chapter__inner">
+    <!-- Bignums -->
+    <div class="bignums reveal">
+      <div><b><em data-count="2.4" data-decimals="1">0</em></b><span>SEC · 0–100 km/h</span></div>
+      <div><b><em data-count="1.6" data-decimals="1">0</em></b><span>G LATERAL</span></div>
+      <div><b><em data-count="8">0</em></b><span>SEC FASTER · NARDÒ</span></div>
+      <div><b><em data-count="380">0</em></b><span>KM/H TOP SPEED</span></div>
+    </div>
+
+    <div class="split">
+      <div class="prose reveal">
+        <p class="lead">More direct than the Chiron: revised camber on both axles, harder springs, a more front-oriented balance.</p>
+        <p>One purpose behind all of it — a faster response to steering input. Agility is the Divo's definition of speed.</p>
+      </div>
+      <div class="prose reveal">
+        <p class="lead">1.6 g of lateral acceleration, earned by those 90 extra kilograms of downforce.</p>
+        <p>On the Nardò handling circuit, the Divo laps eight seconds faster than the Chiron — on the same W16 heart.</p>
+      </div>
+    </div>
+
+    <!-- Downforce comparison -->
+    <div class="scale2 reveal">
+      <div class="scale2__col">
+        <span class="lbl">Chiron — Baseline</span>
+        <span class="num">366<small>KG DOWNFORCE</small></span>
+        <div class="scale2__track"><div class="scale2__fill" style="--w:80%;"></div></div>
+        <span class="scale2__note">Where the Divo starts</span>
+      </div>
+      <div class="scale2__col">
+        <span class="lbl">Divo — Downforce</span>
+        <span class="num">456<small>KG</small></span>
+        <div class="scale2__track"><div class="scale2__fill scale2__fill--down" style="--w:100%;"></div></div>
+        <span class="scale2__note"><b>+90 kg</b> — grip in the corners</span>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b>1,600<small style="font-size:.45em;color:var(--ink-faint)">Nm</small></b><span>2,000–6,000 rpm</span></div>
+      <div class="stat"><b>1,995<small style="font-size:.45em;color:var(--ink-faint)">kg</small></b><span>DIN kerb weight</span></div>
+      <div class="stat"><b>420<small style="font-size:.45em;color:var(--ink-faint)">mm</small></b><span>Front discs · 8 pistons</span></div>
+      <div class="stat"><b>400<small style="font-size:.45em;color:var(--ink-faint)">mm</small></b><span>Rear discs · 6 pistons</span></div>
+    </div>
+
+    <div class="quote reveal">
+      <blockquote>To date, a modern Bugatti has represented a perfect balance between high performance, straight-line dynamics and luxury. With the Divo, we are now shifting the focus to lateral dynamics.</blockquote>
+      <figcaption><b>Stephan Winkelmann</b> — President, Bugatti</figcaption>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 INTERIOR ============ -->
+<div class="chapter-break reveal" id="ch05" data-watermark="05">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">05</span>
+    <div>
+      <h2>The Interior<span class="latin">座舱</span></h2>
+      <p>Two colors, one cabin split in half.</p></div>
+  </div>
 </div>
 
-<!-- ===== LIGHT DETAILS ===== -->
-<section class="section">
-  <div class="card-group cols-3 reveal">
-    <div class="card">
-      <img src="img/front-light.webp" alt="Divo front LED" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">15</div>
-        <div class="card-desc">Ultra-slim vertical LED headlights, only 35 mm tall</div>
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">The cabin carries the exterior's two-tone logic inside. The driver's side is almost entirely Divo Racing Blue — a bright turquoise developed exclusively for this car; the passenger side stays dark with selective accents.</p>
+      <p>The seats are a new design: stronger lateral support, thinner and lighter backs, no compromise on comfort. Every material mirrors the exterior spec — each car's colorway is signed off between customer and design team.</p>
+    </div>
+
+    <div class="points reveal">
+      <div class="point">
+        <span class="point__no">Detail · 01</span>
+        <h3>Divo Racing Blue</h3>
+        <p>An exclusive color across the driver's side, <b>split at the center console</b>.</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Detail · 02</span>
+        <h3>New Seats</h3>
+        <p>Stronger lateral support, <b>thinner backs, no compromise on comfort</b>.</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Detail · 03</span>
+        <h3>Material Match</h3>
+        <p>Alcantara, carbon, Divo Grey leather — <b>mirroring the exterior spec</b>.</p>
       </div>
     </div>
-    <div class="card">
-      <img src="img/3d-taillight.webp" alt="Divo 3D taillight" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">16</div>
-        <div class="card-desc">3D-printed taillight — 44 fins of varying size</div>
-      </div>
+  </div>
+
+  <div class="chapter__inner">
+    <div class="figrow reveal">
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/interior-rb.webp" alt="Divo Racing Blue interior" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">05</span>
+          <span class="en">Divo Racing Blue dominates the driver's side; the passenger side stays dark with selective accents.</span>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/interior-rb2.webp" alt="Interior detail" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">06</span>
+          <span class="en">New seats with enhanced lateral support; carbon door panels feature a diamond pattern.</span>
+        </figcaption>
+      </figure>
     </div>
-    <div class="card">
-      <img src="img/taillight-detail.webp" alt="Divo taillight close-up" width="1600" height="1200" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">17</div>
-        <div class="card-desc">Fins widen outward for intensity, narrow inward for a fading effect</div>
+  </div>
+</section>
+
+<!-- ============ 06 BESPOKE ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch06" data-watermark="06">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">06</span>
+    <div>
+      <h2>Bespoke<span class="latin">定制</span></h2>
+      <p>40 Divos. No two the same.</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">From paint color to stitch direction, every detail of the 40 Divos is co-developed one-to-one between customer and design team.</p>
+      <p>The "Lady Bug" is the most extreme of them all. The customer wanted a geometric-dynamic algorithmic fading pattern across the entire body — layered in the bespoke metallic tones of "Customer Special Red" and "Graphite". It took the team over a year and a half to make the CAD pattern fit the three-dimensional body without distortion.</p>
+    </div>
+
+    <div class="quote reveal">
+      <blockquote>We were close to giving up and saying: 'We cannot meet the customer's request.' However, it is our profound conviction that we should never give up and that our foremost motivation should always be to make the impossible possible for the customer.</blockquote>
+      <figcaption><b>Jörg Grumer</b> — Head of Color &amp; Trim, Bugatti Design</figcaption>
+    </div>
+  </div>
+
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/ladybug-01.webp" alt="Bugatti Divo Lady Bug" loading="lazy" width="2000" height="1333">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">07</span>
+      <span class="en">The Bugatti Divo 'Lady Bug' in the special colors "Customer Special Red" and "Graphite".</span>
+    </figcaption>
+  </figure>
+
+  <div class="chapter__inner">
+    <div class="figrow reveal">
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/ladybug-02.webp" alt="Lady Bug development process" loading="lazy" width="2000" height="1333">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">08</span>
+          <span class="en">An absolutely unique car: the development process of the Bugatti Divo 'Lady Bug'.</span>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/ladybug-03.webp" alt="Development of the geometric pattern" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">09</span>
+          <span class="en">The development of the geometric-dynamic, algorithmic fading pattern on the bodywork.</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="inline-quote reveal">
+      <p>Around 1,600 diamonds, each checked and realigned by hand; six-meter films pulled over deeply concave surfaces without a single fold. The multilayer paintwork finally sinks the ruby pattern into an anthracite gradient — months of hand craftsmanship for a depth and brilliance rarely seen in color.</p>
+    </div>
+
+    <div class="quote reveal">
+      <blockquote>If it bears comparison with another car, it is not a Bugatti.</blockquote>
+      <figcaption><b>Ettore Bugatti</b> — Founder</figcaption>
+    </div>
+  </div>
+
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/thermal-club-3.webp" alt="Three Divos at The Thermal Club" loading="lazy" width="2000" height="1333">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">10</span>
+      <span class="en">Three US customer Divos meet at The Thermal Club before delivery. The final Divo, delivered in Europe, wore EB 110 LM Blue — a tribute to Bugatti's last Le Mans works car.</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ============ 07 TARGA FLORIO ============ -->
+<div class="chapter-break reveal" id="ch07" data-watermark="07">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">07</span>
+    <div>
+      <h2>Targa Florio<span class="latin">The Return</span></h2>
+      <p>Ninety years later, the Divo returns to Albert Divo's circuit.</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">In 2022, Bugatti drove the Divo back to the Targa Florio circuit in Sicily, joined by a Type 35 — two cars, 90 years apart, reunited where Albert Divo made his name.</p>
+      <p>The film "Following in Albert Divo's Footsteps" records the return: behind the blue Type 35, a modern Bugatti built for the same purpose — corners.</p>
+    </div>
+  </div>
+
+  <!-- Chapter video: Targa Florio -->
+  <div class="chapter-video reveal">
+    <video autoplay muted loop playsinline preload="metadata" poster="img/targa-hero.webp">
+      <source src="img/targa-florio.mp4" type="video/mp4">
+    </video>
+    <div class="chapter-video__veil"></div>
+    <div class="chapter-video__inner">
+      <span class="chapter-video__no">Following in Albert Divo's Footsteps</span>
+      <h3>Return to Targa Florio</h3>
+      <p>The Divo and the Type 35 — the same Sicilian mountain road, 90 years apart.</p>
+    </div>
+  </div>
+
+  <div class="chapter__inner">
+    <div class="quote reveal">
+      <blockquote>I am deeply impressed by how the Divo is able to get to grips with these roads, some of which are in very poor condition, and the very short distances between corners.</blockquote>
+      <figcaption><b>Andy Wallace</b> — Test driver, Bugatti</figcaption>
+    </div>
+  </div>
+
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/targa-duo.webp" alt="Divo and Type 35 on the Targa Florio" loading="lazy" width="2000" height="1333">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">11</span>
+      <span class="en">The Divo and Type 35 reunited on the Targa Florio circuit.</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ============ 08 SPECIFICATIONS ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch08" data-watermark="08">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">08</span>
+    <div>
+      <h2>Specifications<span class="latin">技术规格</span></h2>
+      <p>W16 · 8.0 litre · 40 units.</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="specs-tabs reveal" id="specsTabs">
+      <div class="specs-tabs__nav" role="tablist">
+        <button class="specs-tabs__btn is-on" data-tab="general" role="tab">General</button>
+        <button class="specs-tabs__btn" data-tab="powertrain" role="tab">Powertrain</button>
+        <button class="specs-tabs__btn" data-tab="chassis" role="tab">Chassis</button>
+      </div>
+      <div class="specs-tabs__panel is-on" data-panel="general">
+        <div class="specs__group">
+          <div class="specs__row"><span class="k">Length</span><span class="v">4,641<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">Width</span><span class="v">2,018<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">Height</span><span class="v">1,212<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">Wheelbase</span><span class="v">2,711<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">Track F / R</span><span class="v">1,749 / 1,666<span class="unit">mm</span></span></div>
+          <div class="specs__row specs__row--hl"><span class="k">Kerb weight</span><span class="v">1,995<span class="unit">kg</span></span></div>
+          <div class="specs__row"><span class="k">Fuel tank</span><span class="v">100<span class="unit">L</span></span></div>
+          <div class="specs__row"><span class="k">Production</span><span class="v">40<span class="unit">units</span></span></div>
+        </div>
+      </div>
+      <div class="specs-tabs__panel" data-panel="powertrain">
+        <div class="specs__group">
+          <div class="specs__row"><span class="k">Engine</span><span class="v">W16 · 4 turbos</span></div>
+          <div class="specs__row"><span class="k">Displacement</span><span class="v">7,993<span class="unit">cm³</span></span></div>
+          <div class="specs__row specs__row--hl"><span class="k">Power</span><span class="v">1,500 PS @ 6,700 rpm</span></div>
+          <div class="specs__row specs__row--hl"><span class="k">Torque</span><span class="v">1,600<span class="unit">Nm</span></span></div>
+          <div class="specs__row"><span class="k">Transmission</span><span class="v">7-speed DSG</span></div>
+          <div class="specs__row"><span class="k">Drivetrain</span><span class="v">Permanent AWD</span></div>
+          <div class="specs__row specs__row--hl"><span class="k">0–100 km/h</span><span class="v">2.4<span class="unit">sec</span></span></div>
+          <div class="specs__row"><span class="k">Top speed</span><span class="v">380<span class="unit">km/h (limited)</span></span></div>
+        </div>
+      </div>
+      <div class="specs-tabs__panel" data-panel="chassis">
+        <div class="specs__group">
+          <div class="specs__row"><span class="k">Suspension</span><span class="v">Double wishbone, F &amp; R</span></div>
+          <div class="specs__row"><span class="k">Front wheels</span><span class="v">10J × 20 · 285/30 R20</span></div>
+          <div class="specs__row"><span class="k">Rear wheels</span><span class="v">13.5J × 21 · 355/25 R21</span></div>
+          <div class="specs__row"><span class="k">Front brakes</span><span class="v">Ø 420 mm · 8 pistons</span></div>
+          <div class="specs__row"><span class="k">Rear brakes</span><span class="v">Ø 400 mm · 6 pistons</span></div>
+          <div class="specs__row"><span class="k">Drive modes</span><span class="v">Lift · EB · Autobahn · Handling</span></div>
+          <div class="specs__row"><span class="k">Lateral G</span><span class="v">1.6 g (Handling)</span></div>
+          <div class="specs__row specs__row--hl"><span class="k">Total downforce</span><span class="v">456<span class="unit">kg</span></span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== WHEELS ===== -->
-<figure class="full-image reveal">
-  <img src="img/wheels-brakes.webp" alt="Divo wheels and brakes" width="2000" height="1174" loading="lazy">
-  <figcaption class="t-caption">18 &nbsp; Four independent air sources per side for brake cooling; wing vanes painted in the French tricolour.</figcaption>
-</figure>
+</main>
 
-<!-- ===== MORE LEGENDS ===== -->
-<section class="section" style="padding-bottom:0;">
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">More Legends</span>
-    <h2 class="t-section">More Legends</h2>
-  </div>
-</section>
-<div class="legends-grid reveal">
-  <a href="https://tourbillon.hypercar.site" target="_blank" rel="noopener" class="legend-card">
-    <div class="legend-name">Tourbillon</div>
-    <div class="legend-sub">V16 · Hybrid · Next Generation</div>
-  </a>
-  <a href="https://bolide.hypercar.site" target="_blank" rel="noopener" class="legend-card">
-    <div class="legend-name">Bolide</div>
-    <div class="legend-sub">Track-only · 1,600 PS · 1,450 kg</div>
-  </a>
-  <a href="https://f80.hypercar.site" target="_blank" rel="noopener" class="legend-card">
-    <div class="legend-name">F80</div>
-    <div class="legend-sub">Ferrari · V6 Hybrid · 1,200 CV</div>
-  </a>
-</div>
-
-<!-- ===== Footer ===== -->
 <footer class="footer">
-  <span>© 2025 Bugatti · Divo Archive</span>
-  <div class="footer-lang">
-    <a href="index.html">中文</a>
-    <a href="en.html" class="active" onclick="localStorage.setItem('divo-lang','en')">EN</a>
+  <div class="footer__portal">
+    <div class="footer__portal-inner">
+      <p class="footer__portal-kicker mono">MORE LEGENDS</p>
+      <p class="footer__portal-title">HYPERCAR<span class="footer__portal-dot">.</span>SITE</p>
+      <p class="footer__portal-sub">Hypercar legends, archived in one place</p>
+      <a class="footer__portal-btn mono" href="https://www.hypercar.site" target="_blank" rel="noopener">Visit Hypercar →</a>
+    </div>
+  </div>
+  <div class="footer__contact">
+    <span class="footer__contact-label mono">CONTACT</span>
+    <div class="footer__contact-btns">
+      <a class="sbtn sbtn--bili" href="https://space.bilibili.com/675250962" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M7.1 2.6 8.9.8l2.1 2.1L13.1.8l1.8 1.8-1.7 1.7h2.5c1.9 0 3.4 1.5 3.4 3.4v8.6c0 1.9-1.5 3.4-3.4 3.4H6.3c-1.9 0-3.4-1.5-3.4-3.4V7.7c0-1.9 1.5-3.4 3.4-3.4h2.5L7.1 2.6zM7.6 4.3H6.3c-1.3 0-2.4 1.1-2.4 2.4v8.6c0 1.3 1.1 2.4 2.4 2.4h11.4c1.3 0 2.4-1.1 2.4-2.4V6.7c0-1.3-1.1-2.4-2.4-2.4h-1.3l1.2-1.2-.9-.9-2.2 2.2-2.2-2.2-.9.9 1.2 1.2H7.6z"/><circle cx="9.4" cy="12.6" r="1.5"/><circle cx="14.6" cy="12.6" r="1.5"/></svg>
+        <span class="sbtn__txt"><b>BILIBILI</b><small>@HybridV16 · Bilibili Space</small></span>
+        <i class="sbtn__arrow">→</i>
+      </a>
+      <a class="sbtn sbtn--yt" href="https://www.youtube.com/@HybridV16" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M23.5 7.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.9 3.5 12 3.5 12 3.5s-4.9 0-8.2.3c-.5.1-1.5.1-2.4 1-.7.7-.9 2.4-.9 2.4S.3 9.2.3 11.2v1.6c0 2 .2 4 .2 4s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 7.9.3 7.9.3s4.9 0 8.2-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.2-2 .2-4v-1.6c0-2-.2-4-.2-4zM9.7 15.4V8.2l6.4 3.6-6.4 3.6z"/></svg>
+        <span class="sbtn__txt"><b>YOUTUBE</b><small>@HybridV16 · YouTube Channel</small></span>
+        <i class="sbtn__arrow">→</i>
+      </a>
+    </div>
+  </div>
+  <div class="footer__top">
+    <p class="footer__brand mono">BUGATTI · DIVO</p>
+    <p class="footer__links mono">
+      <a href="index.html">中文</a>
+    </p>
+  </div>
+  <div class="footer__disclaimer">
+    <p>This is a fan-made archive site. Content, images and videos are sourced from Bugatti's official press releases and website, for learning and display purposes. Bugatti, Divo and related trademarks and imagery belong to Bugatti Automobiles S.A.S. Performance figures per official releases.</p>
+    <p class="mono">Image sources: <a href="https://newsroom.bugatti.com" target="_blank" rel="noopener">BUGATTI NEWSROOM</a> · <a href="https://www.bugatti.com/en/models/divo" target="_blank" rel="noopener">BUGATTI.COM</a> — MOLSHEIM · 1928 → 2022</p>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(function(){});
-}
-// Video: play on scroll into view
-document.querySelectorAll('.video-section video').forEach(function(v) {
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) v.play().catch(function(){});
-      else v.pause();
-    });
-  }, { threshold: 0.3 });
-  obs.observe(v);
-});
-</script>
 </body>
 </html>

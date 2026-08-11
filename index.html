@@ -1,459 +1,669 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bugatti Divo — 档案</title>
-  <meta name="description" content="Bugatti Divo：1,500 匹马力、40 台限量、为弯道而生的 coachbuild 超跑。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0a0a0c">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIVO — Bugatti Divo</title>
+<meta name="description" content="布加迪 Divo：为弯道而生的 coachbuild 超跑。1,500 马力 W16、456 公斤下压力、限量 40 台——从 Albert Divo 的赛车血统到 Targa Florio 回归的完整叙事。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DIVO — Bugatti Divo">
+<meta property="og:description" content="为弯道而生。1,500 PS / 456 kg 下压力 / 限量 40 台。">
+<meta property="og:image" content="img/hero-launch.webp">
+<meta property="og:url" content="https://divo.hypercar.site/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0b0d'/%3E%3Ctext x='50' y='68' font-size='62' text-anchor='middle' fill='%23f4f2ee' font-family='serif'%3ED%3C/text%3E%3C/svg%3E">
+<script src="js/lang-detect.js"></script>
 </head>
 <body>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-bg">
-    <img src="img/hero-launch.webp" alt="Bugatti Divo in action" width="2000" height="1125" loading="eager">
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <span class="nav__now mono" id="navNow">01 · 名字的由来</span>
+    <a class="nav__brand is-hidden" href="#hero">
+      <svg viewBox="0 0 2468.89 566.93" width="86" height="20" fill="currentColor" aria-label="BUGATTI"><path d="M272.56 273.34c28.81-26.48 45.95-63.86 45.95-107.47 0-89.56-65.41-154.97-155.75-154.97H0v545.13h174.44c92.67 0 160.42-66.97 160.42-159.64 0-52.18-23.36-95.79-62.3-123.04ZM87.22 95.01h72.42c42.83 0 71.65 28.81 71.65 70.87s-28.81 70.87-71.65 70.87H87.22V95.01Zm84.1 376.91h-84.1V320.84h84.1c45.17 0 76.32 30.37 76.32 75.54s-31.15 75.54-76.32 75.54ZM648.69 406.51c0 44.39-31.93 76.32-76.32 76.32s-76.32-31.93-76.32-76.32V10.9h-87.22v389.38c0 96.56 68.53 166.65 163.54 166.65s163.54-70.09 163.54-166.65V10.9h-87.22v395.61ZM993.03 0c-95.01 0-163.54 70.09-163.54 166.65v233.62c0 96.56 68.53 166.65 163.54 166.65s163.54-70.09 163.54-166.65V241.41H993.03v84.11h76.32v80.99c0 44.39-31.93 76.32-76.32 76.32s-76.32-31.93-76.32-76.32V160.42c0-44.39 31.93-76.32 76.32-76.32s76.32 31.93 76.32 76.32v14.02h87.22v-7.79C1156.57 70.09 1088.04 0 993.03 0ZM1344.1 10.9l-125.38 545.12h86.44L1330.08 447h147.96l24.92 109.02h86.44L1464.03 10.9H1344.1Zm5.45 351.99 54.51-239.08 54.51 239.08h-109.02ZM1604.2 95.01h119.93l.78 461.02h85.66l.78-461.02h119.92V10.9H1604.2v84.11zM1976.59 95.01h119.93l.78 461.02h85.66l.78-461.02h119.92V10.9h-327.07v84.11zM2381.67 10.9h87.22v545.12h-87.22z"></path></svg>
+      <span class="nav__brand-sub">DIVO</span>
+    </a>
+    <span class="nav__lang">
+      <a class="lang-btn mono" href="en.html">EN</a>
+      <button class="nav__menu-btn mono" id="menuBtn" aria-label="章节菜单" aria-expanded="false"><span class="nav__menu-icon"><i></i><i></i><i></i></span></button>
+    </span>
   </div>
-  <div class="hero-content">
-    <h1 class="t-display hero-name">DIVO</h1>
-    <p class="hero-sub">为弯道而生的 1,500 匹 coachbuild 超跑</p>
-  </div>
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
+  <div class="nav__progress" aria-hidden="true"><i id="navBar"></i></div>
+</header>
 
-<!-- ===== 01 数据锚定 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">01</span>
-  <div class="data-grid reveal">
-    <div class="data-cell">
-      <div class="data-value"><span data-count="1500" data-suffix="">0</span><span class="unit">PS</span></div>
-      <div class="data-label">最大功率</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="380" data-suffix="">0</span><span class="unit">km/h</span></div>
-      <div class="data-label">极速（限速）</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="2.4" data-decimals="1" data-suffix="">0</span><span class="unit">s</span></div>
-      <div class="data-label">0–100 km/h</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="456" data-suffix="">0</span><span class="unit">kg</span></div>
-      <div class="data-label">总下压力</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="1600" data-suffix="">0</span><span class="unit">Nm</span></div>
-      <div class="data-label">最大扭矩</div>
-    </div>
-    <div class="data-cell">
-      <div class="data-value"><span data-count="40" data-suffix="">0</span><span class="unit">台</span></div>
-      <div class="data-label">限量生产</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 02 诞生 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">02</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">The Beginning</span>
-    <h2 class="t-section">诞生</h2>
-  </div>
-  <div class="two-col reveal">
-    <div>
-      <p class="t-body">2018 年 8 月，蒙特利尔 The Quail 聚会上，布加迪揭开了 Divo 的面纱。</p>
-      <p class="t-body" style="margin-top:1rem;">彼时刚上任的 CEO Stephan Winkelmann 做了一个决定：不能再只造直线快的车。Chiron 已经够快了，但客户想要别的东西——弯道里的快感。</p>
-      <p class="t-body" style="margin-top:1rem;">于是 Divo 诞生了。W16 心脏没变，但底盘、空力、重量全部重新来过。极速从 420+ 降到 380 km/h——这 40 km/h 换来了 90 kg 额外下压力和 Nardò 赛道快 8 秒。</p>
-    </div>
-    <div>
-      <p class="t-body">这台车以 Albert Divo 命名。这位法国车手在 1920–30 年代为布加迪赢下两次 Targa Florio——那是西西里岛上最残酷的耐力赛，赛道沿着山路跑了 148 公里。</p>
-      <p class="t-body" style="margin-top:1rem;">Divo 也是布加迪复兴 coachbuilding 传统的第一步。40 台，没有两台一样。每台都是客户和设计师一起从零开始的作品。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 全屏引文 ===== -->
-<div class="quote-section reveal">
-  <div class="quote-mark">"</div>
-  <p class="quote-text">To date, a modern Bugatti has represented a perfect balance between high performance, straight-line dynamics and luxury. With the Divo, we are now shifting the focus to lateral dynamics.</p>
-  <p class="quote-author">Stephan Winkelmann · President, Bugatti</p>
+<div class="menu-overlay" id="menuOverlay" hidden>
+  <nav class="menu-overlay__nav" aria-label="章节菜单"></nav>
 </div>
 
-<!-- ===== 03 设计 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">03</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Design</span>
-    <h2 class="t-section">设计</h2>
+<div class="scroll-gauge" aria-hidden="true">
+  <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19"/><circle class="sg__bar" cx="22" cy="22" r="19"/></svg>
+  <span class="sg__num mono">00</span>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <video autoplay muted loop playsinline preload="metadata" poster="img/hero-launch.webp">
+      <source src="video/thermal-hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__veil"></div>
   </div>
-
-  <!-- Full-width side profile -->
-  <figure class="full-image reveal">
-    <img src="img/side-profile2.webp" alt="Bugatti Divo side profile" width="2000" height="1333" loading="lazy">
-    <figcaption class="t-caption">01 &nbsp; 更低更长的侧身比例——上半部分肌肉感十足，下半部分功能至上的技术美学。 / A lower, longer silhouette — muscular elegance above, technical precision below.</figcaption>
-  </figure>
-
-  <div class="two-col reveal" style="margin-top:3rem;">
-    <div>
-      <p class="t-body">设计负责人 Jascha Straub 给团队的 brief 很简单：Divo 要一眼就能认出是布加迪，但绝不能和 Chiron 搞混。</p>
-      <p class="t-body" style="margin-top:1rem;">前脸重新开模。马蹄形格栅更宽，两侧加了新的进气口给刹车散热。竖条状 LED 前灯只有 35mm 厚——布加迪量产车里最扁的灯组。</p>
-    </div>
-    <div>
-      <p class="t-body">车顶做成了 NACA 进气道的形状，气流顺着中脊线一路流到尾翼。这条脊线致敬了 Type 57 Atlantic——布加迪历史上最美的车。</p>
-      <p class="t-body" style="margin-top:1rem;">尾部最抢眼的是 3D 打印尾灯：44 片不同尺寸的鳍片，外宽内窄，点亮后像呼吸一样渐变。整个后格栅是 3D 打印工艺制造的。</p>
-    </div>
-  </div>
-
-  <!-- Design cards -->
-  <div class="card-group reveal" style="margin-top:3rem;">
-    <div class="card">
-      <img src="img/sketch-rear.webp" alt="Divo design sketch rear" width="1600" height="900" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">02</div>
-        <div class="card-desc">Design sketch — rear 3/4 view / Jascha Straub, Bugatti Design</div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/sketch-side.webp" alt="Divo design sketch side" width="1600" height="1142" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">03</div>
-        <div class="card-desc">Design sketch — side view / Jascha Straub, Bugatti Design</div>
-      </div>
+  <div class="hero__content">
+    <p class="hero__tag">MADE FOR CORNERS <b>✕</b> COACHBUILDING · 40 UNITS</p>
+    <h1 class="hero__title">DIVO</h1>
+    <p class="hero__sub">为弯道而生。现代 coachbuilding 的开端。限量 40 台。</p>
+    <div class="hero__data">
+      <div><b><em data-count="1500">0</em></b><span>PS</span></div>
+      <div><b><em data-count="1600">0</em></b><span>NM</span></div>
+      <div><b><em data-count="456">0</em></b><span>KG 下压力</span></div>
+      <div><b>40</b><span>UNITS</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===== 04 空气动力学 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">04</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Aerodynamics</span>
-    <h2 class="t-section">空气动力学</h2>
-  </div>
-
-  <div class="two-col reveal">
+<!-- ============ 01 名字的由来 ============ -->
+<div class="chapter-break reveal" id="ch01" data-watermark="01">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">01</span>
     <div>
-      <p class="t-body">Divo 的空力不是贴几片碳纤维翼片那么简单。整个前盖、前扰流板、侧裙、尾翼、扩散器全部重新设计。目标只有一个：下压力。</p>
-      <p class="t-body" style="margin-top:1rem;">最终结果：总下压力 456 kg，比 Chiron 多 90 kg。这 90 kg 直接转化成了弯道里的抓地力。</p>
-
-      <!-- Performance bars -->
-      <div class="perf-bars" style="margin-top:2.5rem;">
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>下压力提升</span><span>+90 kg vs Chiron</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="100"></div></div>
-        </div>
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>Nardò 圈速提升</span><span>−8 秒 vs Chiron</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="85"></div></div>
-        </div>
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>横向加速度</span><span>1.6 g</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="92"></div></div>
-        </div>
-        <div class="perf-bar-row">
-          <div class="perf-bar-label"><span>减重</span><span>−35 kg vs Chiron</span></div>
-          <div class="perf-bar-track"><div class="perf-bar-fill" data-width="60"></div></div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <img src="img/rear-wing.webp" alt="Divo rear wing and diffuser" width="1600" height="1253" loading="lazy" style="width:100%;">
-      <p class="t-caption" style="margin-top:0.8rem;">04 &nbsp; 1.83 米宽的尾翼同时充当空气制动器，配合全新高效扩散器，下压力比 Chiron 多 90 kg。 / The 1.83 m rear wing doubles as an air brake. Combined with the new diffuser, 90 kg more downforce than Chiron.</p>
-    </div>
+      <h2>名字的由来<span class="latin">The Name</span></h2>
+      <p>Albert Divo —— 为布加迪赢下两次 Targa Florio 的法国车手。</p></div>
   </div>
+</div>
 
-  <!-- Aero detail cards -->
-  <div class="card-group cols-3 reveal" style="margin-top:3rem;">
-    <div class="card">
-      <img src="img/naca-roof.webp" alt="NACA air duct roof" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">05</div>
-        <div class="card-desc">NACA 进气道车顶 / NACA duct roof for engine cooling</div>
-      </div>
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">这台车以一位车手的名字命名。1928 年和 1929 年，Albert Divo 驾驶 Type 35 B 连续两年赢下 Targa Florio——一条沿西西里岛山区蜿蜒 148 公里、没有护栏的公路赛道。</p>
+      <p>2018 年 8 月，The Quail 聚会上，布加迪揭开 Divo 的面纱。它比 Chiron 轻 35 公斤、下压力多 90 公斤，极速自愿限制在 380 km/h——省下的每一分空气阻力，都换成了弯道里的抓地力。</p>
     </div>
-    <div class="card">
-      <img src="img/central-fin.webp" alt="Central fin from Type 57 Atlantic" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">06</div>
-        <div class="card-desc">中脊线致敬 Type 57 Atlantic / Central fin derived from the Type 57 Atlantic</div>
+
+    <div class="hcards reveal">
+      <div class="hcard">
+        <span class="hcard__year">1928 · Targa Florio</span>
+        <h3>首次夺冠</h3>
+        <span class="hcard__num">Type 35 B · 西西里山路</span>
+        <p>加入布加迪厂队的第一年，Albert Divo 就赢下了这条当时最艰苦的耐力赛道。</p>
       </div>
-    </div>
-    <div class="card">
-      <img src="img/horseshoe-grille.webp" alt="Horseshoe grille" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">07</div>
-        <div class="card-desc">加宽的马蹄形格栅 / Wider horseshoe grille for optimized air flow</div>
+      <div class="hcard">
+        <span class="hcard__year">1929 · 卫冕</span>
+        <h3>连续两年</h3>
+        <span class="hcard__num">六次大奖赛胜利</span>
+        <p>二十年的赛车生涯里，Divo 为布加迪拿下六场大奖赛和两届 Targa Florio。</p>
+      </div>
+      <div class="hcard">
+        <span class="hcard__year">2018 · 春</span>
+        <h3>公开发布前已售罄</h3>
+        <span class="hcard__num">40 台 · 五百万欧元</span>
+        <p>Divo 以一对一面谈的形式私下展示给 Chiron 客户——首次约谈后数周内，40 台全部订出。</p>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ===== 05 座舱 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">05</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Interior</span>
-    <h2 class="t-section">座舱</h2>
-  </div>
-
-  <div class="two-col reveal">
-    <div>
-      <img src="img/interior-rb.webp" alt="Divo interior Divo Racing Blue" width="1600" height="1067" loading="lazy" style="width:100%;">
-      <p class="t-caption" style="margin-top:0.8rem;">08 &nbsp; Divo Racing Blue 贯穿驾驶员侧，乘客侧只留暗色点缀。 / Divo Racing Blue dominates the driver's side; the passenger side stays dark with selective accents.</p>
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/side-profile2.webp" alt="Bugatti Divo 侧面" loading="lazy" width="2000" height="1333">
     </div>
-    <div>
-      <p class="t-body">座舱延续了外观的双色逻辑。驾驶员侧几乎全是 Divo Racing Blue——这个专门为 Divo 调配的亮蓝绿色。乘客侧则是深色为主，两种氛围被中控台一分为二。</p>
-      <p class="t-body" style="margin-top:1rem;">座椅是全新设计。侧向支撑比 Chiron 更强，靠背更薄更轻，但包裹感没有打折。碳纤维门板上嵌了和外观一样的菱形纹理。</p>
-      <p class="t-body" style="margin-top:1rem;">Alcantara 面料、碳纤维饰板、Divo Grey 皮革——内饰材料和外观涂装一一对应。每台车的配色方案都是客户和设计团队逐项敲定的。</p>
-    </div>
-  </div>
-
-  <figure class="full-image reveal" style="margin-top:3rem;">
-    <img src="img/interior-rb2.webp" alt="Divo interior detail" width="2000" height="1333" loading="lazy">
-    <figcaption class="t-caption">09 &nbsp; 新座椅提供更强侧向支撑，碳纤维门板嵌有菱形纹理。 / New seats with enhanced lateral support; carbon door panels feature a diamond pattern.</figcaption>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">01</span>
+      <span class="en">A lower, longer silhouette — muscular elegance above, technical precision below.</span>
+      <span class="zh">更低更长的侧面——上半部分是肌肉的优雅，下半部分是技术的精确。</span>
+    </figcaption>
   </figure>
 </section>
 
-<!-- ===== 06 定制 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">06</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Bespoke</span>
-    <h2 class="t-section">定制</h2>
+<!-- ============ 02 设计 ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch02" data-watermark="02">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">02</span>
+    <div>
+      <h2>设计<span class="latin">Design</span></h2>
+      <p>一眼认出是布加迪，但绝不是 Chiron。</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">设计负责人 Jascha Straub 给团队的 brief 只有一句话：Divo 必须一眼认出是布加迪，却不可能和 Chiron 混淆。</p>
+      <p>车顶挖出 NACA 进气道，气流顺着中脊线流向后翼——这条脊线直接取自 Type 57 Atlantic。前脸重新开模，尾部的 3D 打印灯组则来自全新的制造工艺。</p>
+    </div>
+
+    <div class="points reveal">
+      <div class="point">
+        <span class="point__no">Signature · 01</span>
+        <h3>NACA 车顶</h3>
+        <p>进气口位于车顶正中，为 W16 供气，同时<b>梳理尾翼上方的气流</b>。</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Signature · 02</span>
+        <h3>35 mm 前灯</h3>
+        <p>布加迪量产车史上最扁的 LED 灯组，<b>竖条日行灯延伸进翼子板</b>。</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Signature · 03</span>
+        <h3>3D 打印尾灯</h3>
+        <p>44 片不同尺寸的鳍片，<b>点亮时从外到内渐变熄灭</b>。</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Signature · 04</span>
+        <h3>加宽格栅</h3>
+        <p>马蹄形格栅更宽，<b>为刹车冷却开辟新的进气通道</b>。</p>
+      </div>
+    </div>
   </div>
 
-  <div class="two-col reveal">
-    <div>
-      <p class="t-body">40 台 Divo，没有两台一样。</p>
-      <p class="t-body" style="margin-top:1rem;">布加迪把 coachbuilding 这个词从博物馆里翻了出来。过去的 coachbuilder 是按客户选的底盘做车身；现在的 Divo 是从涂装颜色到缝线走向，每一个细节都由客户和设计团队一起完成。</p>
-      <p class="t-body" style="margin-top:1rem;">Lady Bug 是其中最极端的例子。客户想要一种几何渐变的菱形图案覆盖全车，设计师花了一年半才找到技术方案：六米长的转印膜，逐片贴上车身，每一片都不能有气泡。喷漆时还要保证不损伤这层图案。</p>
-      <blockquote class="quote-inline reveal" style="margin-top:2.5rem;">
-        <p class="qi-en">“If it bears comparison with another car, it is not a Bugatti.”</p>
-        <p class="qi-cn">能和别的车相提并论，就不是布加迪。</p>
-        <cite>Ettore Bugatti · 创始人</cite>
-      </blockquote>
-    </div>
-    <div>
-      <p class="t-body">交付在美国西海岸的 Thermal Club 赛道进行。三台 Divo 在交付前最后一次聚在一起——法国赛车蓝、钛银哑光、阿根廷水晶亮面——三种完全不同的性格，同一副骨架。</p>
-      <p class="t-body" style="margin-top:1rem;">最后一台交付的 Divo 选了 Bugatti EB 经典色作为主色调。车主对传统有着精准的直觉。</p>
+  <!-- 草图轮播 -->
+  <div class="chapter__inner">
+    <span class="sec-label reveal">设计档案 — Design Archive</span>
+    <div class="slider reveal" id="sketchSlider">
+      <div class="slider__stage">
+        <img src="img/sketch-rear.webp" alt="尾部设计草图" loading="lazy" width="1600" height="900" data-cap="Jascha Straub — 尾部 3/4 视角设计草图">
+        <img src="img/sketch-side.webp" alt="侧面设计草图" loading="lazy" width="1600" height="1142" data-cap="Jascha Straub — 侧面设计草图">
+      </div>
+      <div class="slider__cap">
+        <span class="info"><span id="sketchCapLabel">Sketch · 01</span><span id="sketchCapText">Jascha Straub — 尾部 3/4 视角设计草图</span></span>
+        <div class="slider__nav">
+          <span class="slider__count"><b id="sketchCur">01</b> / 02</span>
+          <button class="slider__btn" id="sketchPrev" aria-label="上一张">←</button>
+          <button class="slider__btn" id="sketchNext" aria-label="下一张">→</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Custom cars cards -->
-  <div class="card-group reveal" style="margin-top:3rem;">
-    <div class="card">
-      <img src="img/custom-french-blue.webp" alt="Divo French Racing Blue" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">10</div>
-        <div class="card-desc">French Racing Blue Matt / Beluga Black interior</div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/custom-titanium.webp" alt="Divo Titanium Silver" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">11</div>
-        <div class="card-desc">Divo Titanium Silver Matt / Divo Grey interior</div>
+  <!-- 拆解动画：全宽 -->
+  <div class="chapter__inner">
+    <span class="sec-label reveal">拆解视角 — Exploded View</span>
+    <div class="vframe reveal">
+      <video autoplay muted loop playsinline preload="metadata" poster="img/explosion-poster.webp">
+        <source src="video/explosion.mp4" type="video/mp4">
+      </video>
+      <div class="vframe__cap">
+        <span class="no">DESIGN · 04</span>
+        <span class="t">从碳纤维车身到 W16——每一层结构，都服务于弯道。</span>
       </div>
     </div>
   </div>
-  <div class="card-group reveal" style="margin-top:clamp(1rem,2vw,2rem);">
-    <div class="card">
-      <img src="img/custom-argent.webp" alt="Divo Argent Crystal" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">12</div>
-        <div class="card-desc">Argent Crystal Gloss / Gris Rafale & Lake Blue interior</div>
+
+  <div class="chapter__inner">
+    <div class="dcards reveal">
+      <div class="dcard">
+        <img src="img/naca-roof.webp" alt="NACA 车顶进气道" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 01</span>
+          <h3>NACA 车顶进气道</h3>
+          <p>位于车顶中央，<b>向 W16 供气</b>，同时减少尾翼上方的湍流。</p>
+        </div>
+      </div>
+      <div class="dcard">
+        <img src="img/central-fin.webp" alt="Type 57 Atlantic 中脊线" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 02</span>
+          <h3>中脊线</h3>
+          <p>从车头延伸到尾翼，<b>致敬 Type 57 Atlantic</b> 的经典轮廓。</p>
+        </div>
+      </div>
+      <div class="dcard">
+        <img src="img/front-light.webp" alt="35mm 前灯" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 03</span>
+          <h3>35 mm 前灯</h3>
+          <p>布加迪量产车史上最扁的 LED 灯组，<b>竖条日行灯延伸进翼子板</b>。</p>
+        </div>
+      </div>
+      <div class="dcard">
+        <img src="img/horseshoe-grille.webp" alt="加宽马蹄形格栅" loading="lazy" width="1600" height="1067">
+        <div class="dcard__body">
+          <span class="no">Signature · 04</span>
+          <h3>加宽马蹄格栅</h3>
+          <p>布加迪三大设计元素之一，<b>为 Divo 加宽并重新定位</b>。</p>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <img src="img/thermal-club-3.webp" alt="Three Divos at Thermal Club" width="2000" height="1333" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">13</div>
-        <div class="card-desc">Three US customer Divos meet at The Thermal Club before delivery</div>
-      </div>
+
+    <div class="quote reveal">
+      <blockquote>We had a host of liberties when we developed the Divo because we limited the top speed to 380 km/h. As a result, we were able to generate more downforce and turn the Divo into a visually and technically independent model.<span class="zh">「把极速限制在 380，我们反而获得了大量自由：可以放心增加下压力，把 Divo 做成一台在视觉和技术上都独立的车。」</span></blockquote>
+      <figcaption><b>Frank Heyl</b> — 布加迪设计副总监</figcaption>
+    </div>
+
+    <div class="figrow reveal">
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/3d-taillight.webp" alt="3D 打印尾灯" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">02</span>
+          <span class="en">The 3-D rear light, part of the rear grille produced by a 3D printing process.</span>
+          <span class="zh">3D 打印工艺制造的贯穿式尾灯组。</span>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/taillight-detail.webp" alt="3D 尾灯细节" loading="lazy" width="1600" height="1200">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">03</span>
+          <span class="en">Fins widen outward for intensity, narrow inward for a fading effect.</span>
+          <span class="zh">鳍片外宽内窄——向外更亮，向内渐灭。</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ===== 07 技术规格 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">07</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Specifications</span>
-    <h2 class="t-section">技术规格</h2>
-  </div>
-
-  <div class="reveal" style="max-width:700px;">
-    <div class="spec-tabs">
-      <button class="spec-tab active" data-panel="spec-powertrain">动力总成</button>
-      <button class="spec-tab" data-panel="spec-chassis">底盘</button>
-      <button class="spec-tab" data-panel="spec-dimensions">尺寸</button>
-    </div>
-
-    <div id="spec-powertrain" class="spec-panel active">
-      <div class="spec-row"><span class="spec-key">发动机</span><span class="spec-val">W16 · 7,993 cm³</span></div>
-      <div class="spec-row"><span class="spec-key">增压</span><span class="spec-val">4 涡轮 · 2 级增压 · 水/空气中冷</span></div>
-      <div class="spec-row"><span class="spec-key">最大功率</span><span class="spec-val">1,103 kW / 1,500 PS @ 6,700 rpm</span></div>
-      <div class="spec-row"><span class="spec-key">最大扭矩</span><span class="spec-val">1,600 Nm (2,000–6,000 rpm)</span></div>
-      <div class="spec-row"><span class="spec-key">变速箱</span><span class="spec-val">7 速 DSG 双离合</span></div>
-      <div class="spec-row"><span class="spec-key">驱动</span><span class="spec-val">永久四驱 · 前轴可控纵向差速器</span></div>
-      <div class="spec-row"><span class="spec-key">0–100 km/h</span><span class="spec-val">2.4 秒</span></div>
-      <div class="spec-row"><span class="spec-key">极速</span><span class="spec-val">380 km/h（限速）</span></div>
-    </div>
-
-    <div id="spec-chassis" class="spec-panel">
-      <div class="spec-row"><span class="spec-key">悬挂</span><span class="spec-val">双叉臂 前后</span></div>
-      <div class="spec-row"><span class="spec-key">前轮</span><span class="spec-val">10J × 20 ET55 · 285/30 R20</span></div>
-      <div class="spec-row"><span class="spec-key">后轮</span><span class="spec-val">13.5J × 21 ET71.5 · 355/25 R21</span></div>
-      <div class="spec-row"><span class="spec-key">前刹车盘</span><span class="spec-val">Ø 420 mm · 8 活塞</span></div>
-      <div class="spec-row"><span class="spec-key">后刹车盘</span><span class="spec-val">Ø 400 mm · 6 活塞</span></div>
-      <div class="spec-row"><span class="spec-key">驾驶模式</span><span class="spec-val">Lift · EB · Autobahn · Handling</span></div>
-      <div class="spec-row"><span class="spec-key">横向加速度</span><span class="spec-val">1.6 g（Handling 模式）</span></div>
-      <div class="spec-row"><span class="spec-key">总下压力</span><span class="spec-val">456 kg</span></div>
-    </div>
-
-    <div id="spec-dimensions" class="spec-panel">
-      <div class="spec-row"><span class="spec-key">长</span><span class="spec-val">4,641 mm</span></div>
-      <div class="spec-row"><span class="spec-key">宽</span><span class="spec-val">2,018 mm</span></div>
-      <div class="spec-row"><span class="spec-key">高</span><span class="spec-val">1,212 mm</span></div>
-      <div class="spec-row"><span class="spec-key">轴距</span><span class="spec-val">2,711 mm</span></div>
-      <div class="spec-row"><span class="spec-key">前轮距 / 后轮距</span><span class="spec-val">1,749 mm / 1,666 mm</span></div>
-      <div class="spec-row"><span class="spec-key">整备质量</span><span class="spec-val">1,995 kg（比 Chiron 轻 35 kg）</span></div>
-      <div class="spec-row"><span class="spec-key">油箱</span><span class="spec-val">100 L</span></div>
-      <div class="spec-row"><span class="spec-key">限量</span><span class="spec-val">40 台</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 08 传承收尾 ===== -->
-<section class="section" style="position:relative;">
-  <span class="section-num">08</span>
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">Targa Florio</span>
-    <h2 class="t-section">Targa Florio</h2>
-  </div>
-  <div class="two-col reveal">
+<!-- ============ 03 空气动力学 ============ -->
+<div class="chapter-break reveal" id="ch03" data-watermark="03">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">03</span>
     <div>
-      <p class="t-body">Albert Divo 在 1928 年加入布加迪厂队，同年就赢下了 Targa Florio——第二年又赢了一次。这条赛道沿着西西里 Madonie 山脉的公共道路蜿蜒约 148 公里，1,400 多个弯，没有护栏，只有石头墙和悬崖。</p>
-      <p class="t-body" style="margin-top:1rem;">他开的是 Type 35 B。1925 到 1929 年，Type 35 为布加迪连赢五届 Targa Florio，是那个年代弯道最快的车。</p>
+      <h2>空气动力学<span class="latin">Aerodynamics</span></h2>
+      <p>456 公斤总下压力——比 Chiron 多 90 公斤。</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">Divo 的空气动力学不是贴几片碳纤维。前盖、前分流器、侧裙、尾翼、扩散器——全部重新设计，目标只有一个：下压力。</p>
+      <p>工程师把减重省下的每一公斤，都用在增加下压力上，直到轮胎载荷的极限。最终数字：<b>456 公斤，比 Chiron 多 90 公斤</b>。</p>
     </div>
-    <div>
-      <p class="t-body">2022 年，布加迪把 Divo 开回了这条赛道。同行的还有一台 Type 35——跨越 90 年的两台车，在 Albert Divo 成名的地方重逢。</p>
-      <blockquote class="quote-inline" style="margin:1.6rem 0;">
-        <p class="qi-en">“I am deeply impressed by how the Divo is able to get to grips with these roads, some of which are in very poor condition, and the very short distances between corners.”</p>
-        <p class="qi-cn">路况很差、弯距极短，Divo 却能把每一条都稳稳吃住——让我印象深刻。</p>
-        <cite>Andy Wallace · 试驾车手</cite>
-      </blockquote>
-      <p class="t-body">Divo 没有去追直线极速纪录。它追求的是另一种快——弯道里的快。40 台，每台不同：不是流水线产品，是人和车之间的一对一对话。</p>
+
+    <!-- 尾翼热点探索 -->
+    <span class="sec-label reveal">结构解析 — Technical Map</span>
+    <div class="explorer reveal" id="explorer">
+      <div class="explorer__img">
+        <img src="img/rear-wing.webp" alt="Divo 尾翼与扩散器" loading="lazy" width="1600" height="1253">
+        <span class="explorer__hint">悬停探索 ✕</span>
+        <div class="hotspot" style="left:32%;top:24%;" data-h="0">
+          <div class="hotspot__label"><b>1.83 米尾翼</b><small>比 Chiron 宽 23%<br>兼作空气制动器</small></div>
+        </div>
+        <div class="hotspot" style="left:63%;top:72%;" data-h="1">
+          <div class="hotspot__label"><b>全新扩散器</b><small>效率更高的设计<br>容纳四根排气管</small></div>
+        </div>
+        <div class="hotspot" style="left:15%;top:34%;" data-h="2">
+          <div class="hotspot__label"><b>NACA 气流</b><small>车顶气流被引导至尾翼<br>减少湍流 · 提升下压力</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b>1.83<small style="font-size:.45em;color:var(--ink-faint)">m</small></b><span>尾翼宽度</span></div>
+      <div class="stat"><b>23<small style="font-size:.45em;color:var(--ink-faint)">%</small></b><span>比 Chiron 加宽</span></div>
+      <div class="stat"><b>90<small style="font-size:.45em;color:var(--ink-faint)">kg</small></b><span>额外下压力</span></div>
+      <div class="stat"><b>380<small style="font-size:.45em;color:var(--ink-faint)">km/h</small></b><span>限速换来的空气</span></div>
+    </div>
+
+    <div class="inline-quote reveal">
+      <p>前分流器在重刹时随车头下沉贴近地面，下压力随之增加——工程师刻意限制前轴下压力的上限，以保证制动时的气动平衡。</p>
     </div>
   </div>
 
-  <figure class="full-image reveal" style="margin-top:3rem;">
-    <img src="img/targa-duo.webp" alt="Divo and Type 35 reunited on the Targa Florio circuit" width="2000" height="1333" loading="lazy">
-    <figcaption class="t-caption">14 &nbsp; Divo 与 Type 35 在 Targa Florio 赛道重逢——官方试驾影片《Following in Albert Divo's footsteps》。 / Divo and Type 35 reunited on the Targa Florio circuit — from the official film “Following in Albert Divo's footsteps”.</figcaption>
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/wheels-brakes.webp" alt="轮毂与刹车冷却" loading="lazy" width="2000" height="1174">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">04</span>
+      <span class="en">Four independent air sources per side cool the brakes; wing vanes painted in the French tricolour.</span>
+      <span class="zh">每侧四路独立气流冷却刹车；翼片喷涂法国三色旗。</span>
+    </figcaption>
   </figure>
 </section>
 
-<!-- ===== 视频章节 ===== -->
-<div class="video-section reveal">
-  <video preload="metadata" muted loop playsinline poster="img/targa-hero.webp" width="2000" height="1125" style="width:100%;height:auto;">
-    <source src="img/targa-florio.mp4" type="video/mp4">
-  </video>
+<!-- ============ 04 性能 ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch04" data-watermark="04">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">04</span>
+    <div>
+      <h2>性能<span class="latin">Performance</span></h2>
+      <p>Nardò 测试场，一圈快 8 秒。</p></div>
+  </div>
 </div>
 
-<!-- ===== 全屏引文 2 ===== -->
-<div class="quote-section reveal">
-  <div class="quote-mark">"</div>
-  <p class="quote-text">The modern interpretation of coachbuilding gave us engineers new freedom.</p>
-  <p class="quote-author">Stefan Ellrott · Head of Technical Development, Bugatti</p>
+<section class="chapter">
+  <div class="chapter__inner">
+    <!-- 巨型数字 -->
+    <div class="bignums reveal">
+      <div><b><em data-count="2.4" data-decimals="1">0</em></b><span>秒 · 0–100 km/h</span></div>
+      <div><b><em data-count="1.6" data-decimals="1">0</em></b><span>G 横向加速度</span></div>
+      <div><b><em data-count="8">0</em></b><span>秒 · Nardò 圈速提升</span></div>
+      <div><b><em data-count="380">0</em></b><span>KM/H 极速（限速）</span></div>
+    </div>
+
+    <div class="split">
+      <div class="prose reveal">
+        <p class="lead">操控比 Chiron 更直接：前后轴外倾角重新设定，弹簧更硬，重心更偏前轴。</p>
+        <p>这些改动的目的只有一个——让车对方向盘输入的响应更快。敏捷，是 Divo 对「快」的定义。</p>
+      </div>
+      <div class="prose reveal">
+        <p class="lead">1.6 g 的横向加速度，来自那 90 公斤额外的下压力。</p>
+        <p>在 Nardò 的 handling circuit 上，Divo 一圈比 Chiron 快 8 秒——以同一颗 W16 心脏。</p>
+      </div>
+    </div>
+
+    <!-- 下压力对比 -->
+    <div class="scale2 reveal">
+      <div class="scale2__col">
+        <span class="lbl">Chiron — 基准</span>
+        <span class="num">366<small>KG 下压力</small></span>
+        <div class="scale2__track"><div class="scale2__fill" style="--w:80%;"></div></div>
+        <span class="scale2__note">Divo 的起点</span>
+      </div>
+      <div class="scale2__col">
+        <span class="lbl">Divo — 下压力</span>
+        <span class="num">456<small>KG</small></span>
+        <div class="scale2__track"><div class="scale2__fill scale2__fill--down" style="--w:100%;"></div></div>
+        <span class="scale2__note"><b>+90 kg</b> —— 弯道里的抓地力</span>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b>1,600<small style="font-size:.45em;color:var(--ink-faint)">Nm</small></b><span>2,000–6,000 rpm</span></div>
+      <div class="stat"><b>1,995<small style="font-size:.45em;color:var(--ink-faint)">kg</small></b><span>DIN 整备质量</span></div>
+      <div class="stat"><b>420<small style="font-size:.45em;color:var(--ink-faint)">mm</small></b><span>前碳陶制动盘 · 8 活塞</span></div>
+      <div class="stat"><b>400<small style="font-size:.45em;color:var(--ink-faint)">mm</small></b><span>后制动盘 · 6 活塞</span></div>
+    </div>
+
+    <div class="quote reveal">
+      <blockquote>To date, a modern Bugatti has represented a perfect balance between high performance, straight-line dynamics and luxury. With the Divo, we are now shifting the focus to lateral dynamics.<span class="zh">「此前的现代布加迪，是高性能、直线动态与豪华的平衡。Divo 把重心转向了横向动态。」</span></blockquote>
+      <figcaption><b>Stephan Winkelmann</b> — 布加迪总裁</figcaption>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 座舱 ============ -->
+<div class="chapter-break reveal" id="ch05" data-watermark="05">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">05</span>
+    <div>
+      <h2>座舱<span class="latin">The Interior</span></h2>
+      <p>两种颜色，一分为二的座舱。</p></div>
+  </div>
 </div>
 
-<!-- ===== 灯光细节 ===== -->
-<section class="section">
-  <div class="card-group cols-3 reveal">
-    <div class="card">
-      <img src="img/front-light.webp" alt="Divo front LED" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">15</div>
-        <div class="card-desc">35mm 超薄竖条 LED 前灯 / Ultra-slim vertical LED headlights, only 35 mm tall</div>
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">座舱延续外观的双色逻辑。驾驶员侧几乎全是 Divo Racing Blue——为这台车专门调配的亮蓝绿色；乘客侧保持深色，只留少量点缀。</p>
+      <p>座椅是全新设计：侧向支撑更强，靠背更薄更轻，包裹感没有打折。材料与外观一一对应——每一台车的配色方案，都由客户和设计团队逐项敲定。</p>
+    </div>
+
+    <div class="points reveal">
+      <div class="point">
+        <span class="point__no">Detail · 01</span>
+        <h3>Divo Racing Blue</h3>
+        <p>专属颜色贯穿驾驶员侧，<b>以中控台为界</b>。</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Detail · 02</span>
+        <h3>新座椅</h3>
+        <p>更强的侧向支撑，<b>更薄的靠背，包裹感不减</b>。</p>
+      </div>
+      <div class="point">
+        <span class="point__no">Detail · 03</span>
+        <h3>材料对应</h3>
+        <p>Alcantara、碳纤维、Divo Grey 皮革——<b>与外观涂装一一对应</b>。</p>
       </div>
     </div>
-    <div class="card">
-      <img src="img/3d-taillight.webp" alt="Divo 3D taillight" width="1600" height="1067" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">16</div>
-        <div class="card-desc">3D 打印尾灯 — 44 片鳍片 / 3D-printed taillight — 44 fins of varying size</div>
-      </div>
+  </div>
+
+  <div class="chapter__inner">
+    <div class="figrow reveal">
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/interior-rb.webp" alt="Divo Racing Blue 座舱" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">05</span>
+          <span class="en">Divo Racing Blue dominates the driver's side; the passenger side stays dark with selective accents.</span>
+          <span class="zh">Divo Racing Blue 贯穿驾驶员侧，乘客侧只留暗色点缀。</span>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/interior-rb2.webp" alt="座舱细节" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">06</span>
+          <span class="en">New seats with enhanced lateral support; carbon door panels feature a diamond pattern.</span>
+          <span class="zh">新座椅提供更强侧向支撑，碳纤维门板嵌有菱形纹理。</span>
+        </figcaption>
+      </figure>
     </div>
-    <div class="card">
-      <img src="img/taillight-detail.webp" alt="Divo taillight close-up" width="1600" height="1200" loading="lazy">
-      <div class="card-overlay">
-        <div class="card-num">17</div>
-        <div class="card-desc">尾灯细节：外宽内窄，渐变熄灭 / Fins widen outward for intensity, narrow inward for a fading effect</div>
+  </div>
+</section>
+
+<!-- ============ 06 定制 ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch06" data-watermark="06">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">06</span>
+    <div>
+      <h2>定制<span class="latin">Bespoke</span></h2>
+      <p>40 台，没有两台一样。</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">从涂装颜色到缝线走向，40 台 Divo 的每一个细节，都由客户与设计团队一对一完成。</p>
+      <p>Lady Bug 是其中最极端的一次。客户想要的，是一种几何动态的算法渐变图案覆盖全车——专属金属漆「Customer Special Red」与「Graphite」层层叠加。设计师花了超过一年半，才让 CAD 里的图案在三维车身上不产生变形。</p>
+    </div>
+
+    <div class="quote reveal">
+      <blockquote>We were close to giving up and saying: 'We cannot meet the customer's request.' However, it is our profound conviction that we should never give up and that our foremost motivation should always be to make the impossible possible for the customer.<span class="zh">「我们一度接近放弃——'我们做不到客户的要求。'但我们始终相信：永不放弃，把不可能变成可能，才是对客户最大的诚意。」</span></blockquote>
+      <figcaption><b>Jörg Grumer</b> — 布加迪设计 · Color &amp; Trim 主管</figcaption>
+    </div>
+  </div>
+
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/ladybug-01.webp" alt="Bugatti Divo Lady Bug" loading="lazy" width="2000" height="1333">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">07</span>
+      <span class="en">The Bugatti Divo 'Lady Bug' in the special colors "Customer Special Red" and "Graphite".</span>
+      <span class="zh">Lady Bug 成品——Customer Special Red 与 Graphite 的专属配色。</span>
+    </figcaption>
+  </figure>
+
+  <div class="chapter__inner">
+    <div class="figrow reveal">
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/ladybug-02.webp" alt="Lady Bug 开发过程" loading="lazy" width="2000" height="1333">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">08</span>
+          <span class="en">An absolutely unique car: the development process of the Bugatti Divo 'Lady Bug'.</span>
+          <span class="zh">独一无二的车——Lady Bug 的开发过程。</span>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <div class="figure__media">
+          <img src="img/ladybug-03.webp" alt="几何图案的开发" loading="lazy" width="1600" height="1067">
+        </div>
+        <figcaption class="figure__cap">
+          <span class="no">09</span>
+          <span class="en">The development of the geometric-dynamic, algorithmic fading pattern on the bodywork.</span>
+          <span class="zh">车身几何动态算法渐变图案的开发。</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="inline-quote reveal">
+      <p>1,600 颗钻石形状逐颗定位，六米长的转印膜覆盖深凹曲面而不起皱；多层漆面最终把红宝石般的图案均匀融入石墨渐变——数月的手工打磨，换来色彩深处罕见的深度与光泽。</p>
+    </div>
+
+    <div class="quote reveal">
+      <blockquote>If it bears comparison with another car, it is not a Bugatti.<span class="zh">「能和别的车相提并论，就不是布加迪。」</span></blockquote>
+      <figcaption><b>Ettore Bugatti</b> — 创始人</figcaption>
+    </div>
+  </div>
+
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/thermal-club-3.webp" alt="三台 Divo 于 The Thermal Club" loading="lazy" width="2000" height="1333">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">10</span>
+      <span class="en">Three US customer Divos meet at The Thermal Club before delivery. The final Divo, delivered in Europe, wore EB 110 LM Blue — a tribute to Bugatti's last Le Mans works car.</span>
+      <span class="zh">交付前，三台 Divo 在 The Thermal Club 最后一次聚在一起。末台 Divo 于欧洲交付——主色 EB 110 LM Blue，致敬布加迪最后一台勒芒厂车。</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ============ 07 Targa Florio ============ -->
+<div class="chapter-break reveal" id="ch07" data-watermark="07">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">07</span>
+    <div>
+      <h2>Targa Florio<span class="latin">The Return</span></h2>
+      <p>90 年后，Divo 回到 Albert Divo 的赛道。</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="prose reveal">
+      <p class="lead">2022 年，布加迪把 Divo 开回西西里的 Targa Florio 赛道。同行的还有一台 Type 35——两台车相隔 90 年，在 Albert Divo 成名的地方重逢。</p>
+      <p>影片《Following in Albert Divo's Footsteps》记录下这次回归：Type 35 的蓝色身影之后，跟着的是一台同样为弯道而生的现代布加迪。</p>
+    </div>
+  </div>
+
+  <!-- 章节视频：Targa Florio -->
+  <div class="chapter-video reveal">
+    <video autoplay muted loop playsinline preload="metadata" poster="img/targa-hero.webp">
+      <source src="img/targa-florio.mp4" type="video/mp4">
+    </video>
+    <div class="chapter-video__veil"></div>
+    <div class="chapter-video__inner">
+      <span class="chapter-video__no">Following in Albert Divo's Footsteps</span>
+      <h3>回到 Targa Florio</h3>
+      <p>Divo 与 Type 35 —— 同一条西西里山路，相隔 90 年。</p>
+    </div>
+  </div>
+
+  <div class="chapter__inner">
+    <div class="quote reveal">
+      <blockquote>I am deeply impressed by how the Divo is able to get to grips with these roads, some of which are in very poor condition, and the very short distances between corners.<span class="zh">「路况很差、弯距极短，Divo 却能把每一条都稳稳吃住——让我印象深刻。」</span></blockquote>
+      <figcaption><b>Andy Wallace</b> — 布加迪试车手</figcaption>
+    </div>
+  </div>
+
+  <figure class="figure figure--full reveal">
+    <div class="figure__media">
+      <img src="img/targa-duo.webp" alt="Divo 与 Type 35 在 Targa Florio" loading="lazy" width="2000" height="1333">
+    </div>
+    <figcaption class="figure__cap" style="max-width:var(--w-doc);margin-left:auto;margin-right:auto;padding:0 clamp(1.5rem,5vw,4rem);">
+      <span class="no">11</span>
+      <span class="en">The Divo and Type 35 reunited on the Targa Florio circuit.</span>
+      <span class="zh">Divo 与 Type 35 在 Targa Florio 赛道重逢。</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ============ 08 规格 ============ -->
+<div class="chapter-break chapter-break--dark reveal" id="ch08" data-watermark="08">
+  <div class="chapter-break__inner">
+    <span class="chapter-break__no">08</span>
+    <div>
+      <h2>技术规格<span class="latin">Specifications</span></h2>
+      <p>W16 · 8.0 升 · 限量 40 台。</p></div>
+  </div>
+</div>
+
+<section class="chapter">
+  <div class="chapter__inner">
+    <div class="specs-tabs reveal" id="specsTabs">
+      <div class="specs-tabs__nav" role="tablist">
+        <button class="specs-tabs__btn is-on" data-tab="general" role="tab">车体 · General</button>
+        <button class="specs-tabs__btn" data-tab="powertrain" role="tab">动力 · Powertrain</button>
+        <button class="specs-tabs__btn" data-tab="chassis" role="tab">底盘 · Chassis</button>
+      </div>
+      <div class="specs-tabs__panel is-on" data-panel="general">
+        <div class="specs__group">
+          <div class="specs__row"><span class="k">全长 Length</span><span class="v">4,641<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">车宽 Width</span><span class="v">2,018<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">车高 Height</span><span class="v">1,212<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">轴距 Wheelbase</span><span class="v">2,711<span class="unit">mm</span></span></div>
+          <div class="specs__row"><span class="k">轮距 Track F / R</span><span class="v">1,749 / 1,666<span class="unit">mm</span></span></div>
+          <div class="specs__row specs__row--hl"><span class="k">整备质量 Kerb weight</span><span class="v">1,995<span class="unit">kg</span></span></div>
+          <div class="specs__row"><span class="k">油箱 Fuel tank</span><span class="v">100<span class="unit">L</span></span></div>
+          <div class="specs__row"><span class="k">限量 Production</span><span class="v">40<span class="unit">台</span></span></div>
+        </div>
+      </div>
+      <div class="specs-tabs__panel" data-panel="powertrain">
+        <div class="specs__group">
+          <div class="specs__row"><span class="k">发动机 Engine</span><span class="v">W16 · 四涡轮</span></div>
+          <div class="specs__row"><span class="k">排量 Displacement</span><span class="v">7,993<span class="unit">cm³</span></span></div>
+          <div class="specs__row specs__row--hl"><span class="k">最大功率 Power</span><span class="v">1,500 PS @ 6,700 rpm</span></div>
+          <div class="specs__row specs__row--hl"><span class="k">最大扭矩 Torque</span><span class="v">1,600<span class="unit">Nm</span></span></div>
+          <div class="specs__row"><span class="k">变速箱 Transmission</span><span class="v">7 速 DSG 双离合</span></div>
+          <div class="specs__row"><span class="k">驱动 Drive</span><span class="v">全时四驱</span></div>
+          <div class="specs__row specs__row--hl"><span class="k">0–100 km/h</span><span class="v">2.4<span class="unit">秒</span></span></div>
+          <div class="specs__row"><span class="k">极速 Top speed</span><span class="v">380<span class="unit">km/h（限速）</span></span></div>
+        </div>
+      </div>
+      <div class="specs-tabs__panel" data-panel="chassis">
+        <div class="specs__group">
+          <div class="specs__row"><span class="k">悬挂 Suspension</span><span class="v">双叉臂 前后</span></div>
+          <div class="specs__row"><span class="k">前轮 Front wheels</span><span class="v">10J × 20 · 285/30 R20</span></div>
+          <div class="specs__row"><span class="k">后轮 Rear wheels</span><span class="v">13.5J × 21 · 355/25 R21</span></div>
+          <div class="specs__row"><span class="k">前刹 Front brakes</span><span class="v">Ø 420 mm · 8 活塞</span></div>
+          <div class="specs__row"><span class="k">后刹 Rear brakes</span><span class="v">Ø 400 mm · 6 活塞</span></div>
+          <div class="specs__row"><span class="k">驾驶模式 Drive modes</span><span class="v">Lift · EB · Autobahn · Handling</span></div>
+          <div class="specs__row"><span class="k">横向加速度 Lateral G</span><span class="v">1.6 g（Handling）</span></div>
+          <div class="specs__row specs__row--hl"><span class="k">总下压力 Downforce</span><span class="v">456<span class="unit">kg</span></span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 轮毂特写 ===== -->
-<figure class="full-image reveal">
-  <img src="img/wheels-brakes.webp" alt="Divo wheels and brakes" width="2000" height="1174" loading="lazy">
-  <figcaption class="t-caption">18 &nbsp; 四通道刹车冷却 + 法国三色旗翼片。 / Four independent air sources per side for brake cooling; wing vanes painted in the French tricolour.</figcaption>
-</figure>
+</main>
 
-<!-- ===== MORE LEGENDS ===== -->
-<section class="section" style="padding-bottom:0;">
-  <div class="chapter-head reveal">
-    <span class="chapter-tag">More Legends</span>
-    <h2 class="t-section">更多传奇</h2>
-  </div>
-</section>
-<div class="legends-grid reveal">
-  <a href="https://tourbillon.hypercar.site" target="_blank" rel="noopener" class="legend-card">
-    <div class="legend-name">Tourbillon</div>
-    <div class="legend-sub">V16 · Hybrid · Next Generation</div>
-  </a>
-  <a href="https://bolide.hypercar.site" target="_blank" rel="noopener" class="legend-card">
-    <div class="legend-name">Bolide</div>
-    <div class="legend-sub">Track-only · 1,600 PS · 1,450 kg</div>
-  </a>
-  <a href="https://f80.hypercar.site" target="_blank" rel="noopener" class="legend-card">
-    <div class="legend-name">F80</div>
-    <div class="legend-sub">Ferrari · V6 Hybrid · 1,200 CV</div>
-  </a>
-</div>
-
-<!-- ===== Footer ===== -->
 <footer class="footer">
-  <span>© 2025 Bugatti · Divo Archive</span>
-  <div class="footer-lang">
-    <a href="index.html" class="active" onclick="localStorage.setItem('divo-lang','zh')">中文</a>
-    <a href="en.html" onclick="localStorage.setItem('divo-lang','en')">EN</a>
+  <div class="footer__portal">
+    <div class="footer__portal-inner">
+      <p class="footer__portal-kicker mono">MORE LEGENDS · 更多传奇</p>
+      <p class="footer__portal-title">HYPERCAR<span class="footer__portal-dot">.</span>SITE</p>
+      <p class="footer__portal-sub">超跑传奇集合介绍页</p>
+      <a class="footer__portal-btn mono" href="https://www.hypercar.site" target="_blank" rel="noopener">前往 Hypercar →</a>
+    </div>
+  </div>
+  <div class="footer__contact">
+    <span class="footer__contact-label mono">CONTACT · 联系</span>
+    <div class="footer__contact-btns">
+      <a class="sbtn sbtn--bili" href="https://space.bilibili.com/675250962" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M7.1 2.6 8.9.8l2.1 2.1L13.1.8l1.8 1.8-1.7 1.7h2.5c1.9 0 3.4 1.5 3.4 3.4v8.6c0 1.9-1.5 3.4-3.4 3.4H6.3c-1.9 0-3.4-1.5-3.4-3.4V7.7c0-1.9 1.5-3.4 3.4-3.4h2.5L7.1 2.6zM7.6 4.3H6.3c-1.3 0-2.4 1.1-2.4 2.4v8.6c0 1.3 1.1 2.4 2.4 2.4h11.4c1.3 0 2.4-1.1 2.4-2.4V6.7c0-1.3-1.1-2.4-2.4-2.4h-1.3l1.2-1.2-.9-.9-2.2 2.2-2.2-2.2-.9.9 1.2 1.2H7.6z"/><circle cx="9.4" cy="12.6" r="1.5"/><circle cx="14.6" cy="12.6" r="1.5"/></svg>
+        <span class="sbtn__txt"><b>BILIBILI</b><small>@HybridV16 · 哔哩哔哩空间</small></span>
+        <i class="sbtn__arrow">→</i>
+      </a>
+      <a class="sbtn sbtn--yt" href="https://www.youtube.com/@HybridV16" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M23.5 7.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.9 3.5 12 3.5 12 3.5s-4.9 0-8.2.3c-.5.1-1.5.1-2.4 1-.7.7-.9 2.4-.9 2.4S.3 9.2.3 11.2v1.6c0 2 .2 4 .2 4s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 7.9.3 7.9.3s4.9 0 8.2-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.2-2 .2-4v-1.6c0-2-.2-4-.2-4zM9.7 15.4V8.2l6.4 3.6-6.4 3.6z"/></svg>
+        <span class="sbtn__txt"><b>YOUTUBE</b><small>@HybridV16 · YouTube 频道</small></span>
+        <i class="sbtn__arrow">→</i>
+      </a>
+    </div>
+  </div>
+  <div class="footer__top">
+    <p class="footer__brand mono">BUGATTI · DIVO</p>
+    <p class="footer__links mono">
+      <a href="en.html">English</a>
+    </p>
+  </div>
+  <div class="footer__disclaimer">
+    <p>本站为爱好者制作的介绍站点，内容、图片与视频均来自布加迪官方新闻稿与官方网站，供学习与展示之用。Bugatti、Divo 及相关商标、图片版权归 Bugatti Automobiles S.A.S. 所有。性能数据以官方发布为准。</p>
+    <p class="mono">图片来源：<a href="https://newsroom.bugatti.com" target="_blank" rel="noopener">BUGATTI NEWSROOM</a> · <a href="https://www.bugatti.com/en/models/divo" target="_blank" rel="noopener">BUGATTI.COM</a> — MOLSHEIM · 1928 → 2022</p>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(function(){});
-}
-// Video: play on scroll into view
-document.querySelectorAll('.video-section video').forEach(function(v) {
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) v.play().catch(function(){});
-      else v.pause();
-    });
-  }, { threshold: 0.3 });
-  obs.observe(v);
-});
-</script>
 </body>
 </html>

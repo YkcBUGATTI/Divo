@@ -1,9 +1,10 @@
-const CACHE_NAME = 'divo-v3';
+const CACHE_NAME = 'divo-v5';
 const SHELL = [
   'index.html',
   'en.html',
   'css/style.css',
   'js/main.js',
+  'js/lang-detect.js',
   'manifest.json'
 ];
 

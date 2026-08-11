@@ -238,6 +238,7 @@
     g.__done = true;
     var target = parseFloat(g.getAttribute('data-gauge')) || 0;
     var max = parseFloat(g.getAttribute('data-max')) || target;
+    var decimals = parseInt(g.getAttribute('data-decimals') || '0', 10);
     var bar = g.querySelector('.gauge__bar');
     var num = g.querySelector('figcaption b');
     var dur = 2200;
@@ -247,7 +248,7 @@
       var t = Math.min((ts - start) / dur, 1);
       var e = (t === 1) ? 1 : (1 - Math.pow(2, -10 * t));
       if (bar) bar.style.strokeDashoffset = String(G_LEN * (1 - (target / max) * e));
-      if (num) num.textContent = Math.round(target * e).toLocaleString('en-US');
+      if (num) num.textContent = (target * e).toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       if (t < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);

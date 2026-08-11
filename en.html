@@ -300,12 +300,36 @@
 
 <section class="chapter">
   <div class="chapter__inner">
-    <!-- Bignums -->
-    <div class="bignums reveal">
-      <div><b><em data-count="2.4" data-decimals="1">0</em></b><span>SEC · 0–100 km/h</span></div>
-      <div><b><em data-count="1.6" data-decimals="1">0</em></b><span>G LATERAL</span></div>
-      <div><b><em data-count="8">0</em></b><span>SEC FASTER · NARDÒ</span></div>
-      <div><b><em data-count="380">0</em></b><span>KM/H TOP SPEED</span></div>
+    <!-- Performance gauges -->
+    <div class="gauges">
+      <figure class="gauge reveal" data-gauge="2.4" data-max="3" data-decimals="1" data-unit="s" data-label="0–100 km/h">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">s</span></figcaption>
+        </div>
+        <p class="gauge__label">0–100 km/h<br><small>2.4 seconds</small></p>
+      </figure>
+      <figure class="gauge reveal" data-gauge="1.6" data-max="2" data-decimals="1" data-unit="G" data-label="Lateral G">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">G</span></figcaption>
+        </div>
+        <p class="gauge__label">Lateral G<br><small>Grip in the corners</small></p>
+      </figure>
+      <figure class="gauge reveal" data-gauge="8" data-max="10" data-unit="s" data-label="Nardò lap gain">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">s</span></figcaption>
+        </div>
+        <p class="gauge__label">Nardò lap gain<br><small>8 seconds faster than the Chiron</small></p>
+      </figure>
+      <figure class="gauge reveal" data-gauge="380" data-max="400" data-unit="km/h" data-label="Top speed (limited)">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">km/h</span></figcaption>
+        </div>
+        <p class="gauge__label">Top speed (limited)<br><small>Speed traded for air</small></p>
+      </figure>
     </div>
 
     <!-- Alternating media row: cornering -->

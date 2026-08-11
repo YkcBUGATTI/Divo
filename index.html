@@ -301,11 +301,36 @@
 <section class="chapter">
   <div class="chapter__inner">
     <!-- 巨型数字 -->
-    <div class="bignums reveal">
-      <div><b><em data-count="2.4" data-decimals="1">0</em></b><span>秒 · 0–100 km/h</span></div>
-      <div><b><em data-count="1.6" data-decimals="1">0</em></b><span>G 横向加速度</span></div>
-      <div><b><em data-count="8">0</em></b><span>秒 · Nardò 圈速提升</span></div>
-      <div><b><em data-count="380">0</em></b><span>KM/H 极速（限速）</span></div>
+    <!-- 性能圆环表 -->
+    <div class="gauges">
+      <figure class="gauge reveal" data-gauge="2.4" data-max="3" data-decimals="1" data-unit="s" data-label="0–100 km/h">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">s</span></figcaption>
+        </div>
+        <p class="gauge__label">0–100 km/h<br><small>2.4 秒</small></p>
+      </figure>
+      <figure class="gauge reveal" data-gauge="1.6" data-max="2" data-decimals="1" data-unit="G" data-label="横向加速度">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">G</span></figcaption>
+        </div>
+        <p class="gauge__label">横向加速度<br><small>弯道里的 G 值</small></p>
+      </figure>
+      <figure class="gauge reveal" data-gauge="8" data-max="10" data-unit="s" data-label="Nardò 圈速提升">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">s</span></figcaption>
+        </div>
+        <p class="gauge__label">Nardò 圈速提升<br><small>比 Chiron 快 8 秒</small></p>
+      </figure>
+      <figure class="gauge reveal" data-gauge="380" data-max="400" data-unit="km/h" data-label="极速（限速）">
+        <div class="gauge__svg">
+          <svg viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="84"/><circle class="gauge__bar" cx="100" cy="100" r="84"/></svg>
+          <figcaption><b class="mono">0</b> <span class="gauge__unit mono">km/h</span></figcaption>
+        </div>
+        <p class="gauge__label">极速（限速）<br><small>限速换来的空气</small></p>
+      </figure>
     </div>
 
     <!-- 图文交替：操控 -->
